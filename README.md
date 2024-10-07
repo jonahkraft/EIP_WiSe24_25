@@ -4,7 +4,7 @@
 
 >Die Inhalte dieses Repositories sind nicht von offizieller Stelle, sondern werden auf freiwilliger Basis  
 >zusätzlich zur Verfügung gestellt.  
->Erklär-Dateien könnten Fehler enthalten. Sollte jemandem ein Fehler auffallen, gebt bitte Bescheid.  
+>Erklär-Dateien könnten Fehler enthalten. Solltest du einen Fehler finden, gib bitte Bescheid.  
 >Selbiges gilt auch für Musterlösungen.
 >
 >Im Laufe des Semesters wird es weitere Aufgaben geben, die auf freiwilliger Basis bearbeitet werden können.  
@@ -15,7 +15,7 @@
 >(auch wir Übungsleiter wissen NICHT, was drankommt) zu sein, sondern dienen als Hilfe, die eigenen Programmier-Kenntnisse
 >zu verbessern und ein Gefühl für die Art von Aufgaben zu bekommen, die ggf. drankommen könnten.
 >
->Don't take this too seriously! Ihr müsst nichts bearbeiten, es ist lediglich als Hilfestellung angedacht.
+>Don't take this too seriously! Du musst nichts bearbeiten, die Aufgaben sind lediglich als Hilfestellung angedacht.
 
 
 ### Allgemeine Informationen
