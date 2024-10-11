@@ -1,6 +1,6 @@
 ## Einführung in die Programmierung: Wintersemester 24/25
 
-### Disclaimer:
+### Disclaimer
 
 >Die Inhalte dieses Repositories sind nicht von offizieller Stelle, sondern werden auf freiwilliger Basis  
 >zusätzlich zur Verfügung gestellt.  
