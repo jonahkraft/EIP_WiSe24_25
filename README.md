@@ -1,18 +1,18 @@
 ## Einführung in die Programmierung: Wintersemester 24/25
 
 ### Disclaimer
-> Die Inhalte dieses Repositories sind nicht von offizieller Stelle, sondern werden auf freiwilliger Basis  
-> zusätzlich zur Verfügung gestellt.  
-> Erklär-Dateien könnten Fehler enthalten. Solltest du einen Fehler finden, gib bitte Bescheid.  
+> Die Inhalte dieses Repositories sind nicht von offizieller Stelle, sondern werden auf freiwilliger Basis
+> zusätzlich zur Verfügung gestellt.
+> Erklär-Dateien könnten Fehler enthalten. Solltest du einen Fehler finden, gib bitte Bescheid.
 > Selbiges gilt auch für Musterlösungen.
 >
 > Im Laufe des Semesters wird es weitere Aufgaben geben, die auf freiwilliger Basis bearbeitet werden können.  
 >
-> Zur Vorbereitung auf die Klausur wird es ebenfalls Aufgaben geben. Diese basierend grob auf den Aufgaben  
-> der vergangenen Semester und repräsentieren möglicherweise nicht alles, was für die Klausur relevant ist oder  
-> Themen, die nicht klausurrelevant sind. Diese Aufgaben sind nicht dazu gedacht, die alleinige Klausurvorbereitung zu sein,  
-> sondern dienen als Hilfe, die eigenen Programmierkenntnisse zu verbessern und ein Gefühl für die Art von  
-> Aufgaben zu bekommen, die ggf. drankommen könnten.  
+> Zur Vorbereitung auf die Klausur wird es ebenfalls Aufgaben geben. Diese basierend grob auf den Aufgaben
+> der vergangenen Semester und repräsentieren möglicherweise nicht alles, was für die Klausur relevant ist oder
+> Themen, die nicht klausurrelevant sind. Diese Aufgaben sind nicht dazu gedacht, die alleinige Klausurvorbereitung zu sein,
+> sondern dienen als Hilfe, die eigenen Programmierkenntnisse zu verbessern und ein Gefühl für die Art von
+> Aufgaben zu bekommen, die ggf. drankommen könnten.
 > Da auch wir Übungsleiter die Klausur nicht vorher sehen, können wir Fragen wie "Ist das klausurrelevant?" oder "Kommt das dran?"
 > gar nicht oder nur teilweise beantworten.
 >
