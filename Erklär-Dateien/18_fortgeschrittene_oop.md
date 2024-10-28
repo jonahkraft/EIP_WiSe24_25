@@ -31,7 +31,6 @@ class Math:
 print(Math.add(5, 3))  # Ausgabe: 8
 ```
 
----
 
 ## @classmethod
 
@@ -59,7 +58,6 @@ class Circle:
         return cls.pi * (radius ** 2)
 ```
 
----
 
 # Abstrakte Klassen (ABC) und @abstractmethod
 

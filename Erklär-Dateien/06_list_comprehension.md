@@ -33,7 +33,6 @@ den Schleifenkopf "for _ in range(10):" und dann, was passieren soll. Wenn man e
 schreibt man zuerst, was man hinzufügen will - in dem Fall die Zahl 0 - und dann den Schleifenkopf, aber ohne den
 Doppelpunkt. Das ist schon die ganze Magie.
 
----
 
 ## Einige Beispiele
 
@@ -64,7 +63,6 @@ Man kann auch if-Statements in List Comprehensions packen. Das geht analog zu de
 big_numbers2 = [i for i in random_numbers if i > 5]
 ```
 
----
 
 ### Verschachtelte Schleifen
 

@@ -19,7 +19,6 @@ Python unterstützt verschiedene grundlegende Datentypen, die in vielen Programm
 - `bool` (Boolesche Werte)
 - `str` (Zeichenketten, also Text)
 
----
 
 ## `int` (Ganzzahlen)
 
@@ -44,7 +43,6 @@ y = -5
 | `%`       | Modulo (Restwert)         | `5 % 2`  | `1`      |
 | `**`      | Potenzierung              | `5 ** 2` | `25`     |
 
----
 
 ## `float` (Gleitkommazahlen)
 
@@ -67,7 +65,6 @@ y = -0.5
 | `/`       | Division       | `3.5 / 2`   | `1.75`   |
 | `**`      | Potenzierung   | `3.5 ** 2`  | `12.25`  |
 
----
 
 ## `bool` (Boolesche Werte)
 
@@ -109,7 +106,6 @@ Achtung: `=` und `==` haben eine andere Bedeutung! `=` ist eine Wertzuweisung un
 | False | True  | False     | True     | True    |
 | False | False | False     | False    | True    |
 
----
 
 ## `str` (Strings)
 
@@ -170,7 +166,6 @@ print(f"Der Wert von x ist {x}.")
 # Ausgabe: Der Wert von x ist 10.
 ```
 
----
 
 ## `None`
 
@@ -192,7 +187,6 @@ if x is not None:  # für Abfragen auf None verwendet man das Schlüsselwort is.
     print(x + y)
 ```
 
----
 
 ## Nutzereingaben
 
@@ -212,7 +206,6 @@ age = int(input("Wie alt bist du? "))
 Für die anderen Datentypen funktioniert dies analog. Achtung: Wenn man bool verwendet, wird der Wert True, wenn der
 String nicht leer ist und sonst False.
 
----
 
 ## Variablen benennen
 

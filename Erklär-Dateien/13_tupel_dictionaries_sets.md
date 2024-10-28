@@ -7,7 +7,6 @@ Empfohlene Skills: [Datentypen und Operatoren](01_datentypen_operationen.md) und
 In Python gibt es verschiedene Datentypen, die sich für unterschiedliche Aufgaben eignen. In diesem Abschnitt schauen
 wir uns die **Tupel**, **Dictionaries** und **Sets** an.
 
----
 
 ## Tupel
 
@@ -51,7 +50,6 @@ print(my_tuple[1])  # Ausgabe: 20
 Die + und * Operationen funktionieren, da nicht das ursprüngliche Tupel verändert wird, sondern es wird ein neues Tupel
 erzeugt und zurückgegeben.
 
----
 
 ## Dictionaries
 
@@ -101,7 +99,6 @@ person['beruf'] = 'Ingenieurin'
 
 Achtung: `dict[key]` wirft einen Fehler, wenn der key nicht enthalten ist. dict.get(key, default) ist sicherer.
 
----
 
 ## Sets
 
@@ -146,7 +143,6 @@ digit_set.remove(2)
 | `set.intersection(anderes_set)` | Schnittmenge zweier Sets                          | `{1, 2}.intersection({2, 3})` → `{2}`   |
 | `set.difference(anderes_set)`   | Gibt die Differenzmenge zwischen zwei Sets zurück | `{1, 2}.difference({2, 3})` → `{1}`     |
 
----
 
 ## Unterschiede zwischen Tupel, Dictionary und Set
 

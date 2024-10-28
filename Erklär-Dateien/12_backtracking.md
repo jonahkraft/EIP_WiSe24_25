@@ -14,7 +14,6 @@ Es wird häufig für Probleme verwendet, bei denen es viele mögliche Kombinatio
 beim Sortieren oder bei Entscheidungsproblemen. Klassische Beispiele für Backtracking sind **das N-Damen-Problem**, 
 **das Rucksackproblem** und **Sudoku-Löser**.
 
----
 
 ## Aufbau eines Backtracking-Algorithmus
 
@@ -25,7 +24,6 @@ Ein Backtracking-Algorithmus besteht aus den folgenden Komponenten:
 - ausprobiert. Wenn eine Entscheidung zu keiner gültigen Lösung führt, wird ein Rückschritt gemacht (**Backtracking**), 
 - und es wird eine alternative Entscheidung getroffen.
 
----
 
 ### Grundlegender Ablauf:
 
@@ -34,7 +32,6 @@ Ein Backtracking-Algorithmus besteht aus den folgenden Komponenten:
 3. **Wenn eine ungültige Lösung gefunden wird**, einen Schritt zurückgehen und eine alternative Entscheidung treffen.
 4. **Abbruch**: Wenn eine vollständige gültige Lösung gefunden wird, endet der Algorithmus.
 
----
 
 #### Pseudocode:
 
@@ -57,7 +54,6 @@ def vervollständige(Konfiguration K):
 
 ```
 
----
 
 ## Beispiel: Das N-Damen-Problem
 
@@ -131,7 +127,6 @@ n_queens_problem(4)
 3. Wenn keine gültige Platzierung möglich ist, wird das Backtracking durchgeführt (die letzte Platzierung wird entfernt), und eine alternative Platzierung wird getestet.
 4. Wenn alle Damen platziert sind, gibt der Algorithmus die Lösung zurück.
 
----
 
 ## Zusammenfassung
 

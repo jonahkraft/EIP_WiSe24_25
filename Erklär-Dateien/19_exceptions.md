@@ -10,7 +10,6 @@ Für eigene Exceptions: Grundlagen in [OOP](16_oop.md)
 Exceptions sind Fehler, die während der Programmausführung auftreten. Sie unterbrechen den normalen Fluss eines Programms. 
 Python bietet eine Möglichkeit, mit diesen Fehlern umzugehen, damit das Programm nicht abrupt beendet wird.
 
----
 
 ## Catching Exceptions
 
@@ -53,7 +52,6 @@ except ZeroDivisionError:
 Es ist eine gute Praxis, den genauen Fehler anzugeben, z.B. `TypeError` oder `Value Error` und diese einzeln zu catchen.
 Man sollte `except Exception` vermeiden!
 
----
 
 ## Eigene Exceptions erstellen
 

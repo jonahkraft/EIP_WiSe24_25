@@ -16,7 +16,6 @@ bedeutet, dass du ihre Inhalte nach der Erstellung ändern kannst.
 my_list = [1, 2, 3, "vier", 5.0]
 ```
 
----
 
 ## Operationen mit Listen
 
@@ -47,7 +46,6 @@ print(len(digits))  # Ausgabe: 5
 print(sum(digits))  # Ausgabe: 15
 ```
 
----
 
 ## Mit `for`-Schleifen über Listen iterieren
 
@@ -82,7 +80,6 @@ for index, element in enumerate(colors, start=1):
     print(f"{index}. Farbe: {element}")
 ```
 
----
 
 ## Unterschied zwischen mutablen und nicht-mutablen Datentypen
 
@@ -103,7 +100,6 @@ my_string = "Hallo"
 print(my_string)  # Ausgabe: "Hallo"
 ```
 
----
 
 ## `copy()` und `deepcopy()`
 
@@ -132,7 +128,6 @@ deep_copy[2][0] = 300
 print(original_list)  # Ausgabe: [1, 2, [3, 4]]
 ```
 
----
 
 ## Slicing
 

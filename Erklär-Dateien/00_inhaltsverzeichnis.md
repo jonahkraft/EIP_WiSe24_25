@@ -102,7 +102,8 @@
 - Call by Reference
 - Standardwerte für Parameter
 - Lambda-Funktionen
-- `*args` und `**kwargs`
+- `*args`
+- `**kwargs`
 
 
 ## Nützliche eingebaute Funktionen
@@ -222,3 +223,5 @@
 - Typehints für Dictionaries
 - Probleme mit Typehints
 - Wann Typehints verwenden?
+
+

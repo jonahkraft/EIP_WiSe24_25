@@ -19,7 +19,6 @@ gesamt = sum(zahlen)
 print("Die Summe ist:", gesamt)  # Ausgabe: 15
 ```
 
----
 
 ## `max()`
 
@@ -33,7 +32,6 @@ groesste_zahl = max(zahlen)
 print("Die größte Zahl ist:", groesste_zahl)  # Ausgabe: 5
 ```
 
----
 
 ## `min()`
 
@@ -47,7 +45,6 @@ smallest_digit = min(digits)
 print("Die kleinste Zahl ist:", smallest_digit)  # Ausgabe: 1
 ```
 
----
 
 ## `zip()`
 
@@ -63,7 +60,6 @@ combined = list(zip(list1, list2))
 print("Kombinierte Liste:", combined)  # Ausgabe: [(1, 'a'), (2, 'b'), (3, 'c')]
 ```
 
----
 
 ## `enumerate()`
 
@@ -82,7 +78,6 @@ for index, element in enumerate(my_list):
 # Index: 2, Wert: c
 ```
 
----
 
 ## `filter()`
 
@@ -97,7 +92,6 @@ even_digits = list(filter(lambda x: x % 2 == 0, digits))
 print("Gerade Zahlen:", even_digits)  # Ausgabe: [2, 4]
 ```
 
----
 
 ## `map()`
 
@@ -112,7 +106,6 @@ squares = list(map(lambda x: x ** 2, digits))
 print("Quadrate:", squares)  # Ausgabe: [1, 4, 9, 16, 25]
 ```
 
----
 
 ## `sorted()`
 
@@ -126,7 +119,6 @@ sorted_digits = sorted(digits)
 print("Sortierte Liste:", sorted_digits)  # Ausgabe: [1, 2, 3, 4, 5]
 ```
 
----
 
 ## `any()`
 
@@ -140,7 +132,6 @@ my_list = [False, False, True]
 print("Enthält die Liste True?", any(my_list))  # Ausgabe: True
 ```
 
----
 
 ## `all()`
 

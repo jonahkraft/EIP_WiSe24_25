@@ -8,7 +8,6 @@ Das `os`-Modul in Python bietet eine Schnittstelle zu Betriebssystem-Funktionen,
 Dateien und Verzeichnisse zu verwalten, das Arbeitsverzeichnis zu ändern, Pfade zu überprüfen und vieles mehr. 
 Im Folgenden werden einige grundlegende Funktionen dieses Moduls vorgestellt und anhand von Beispielen erklärt.
 
----
 
 ## Aktuelles Arbeitsverzeichnis ermitteln
 
@@ -23,7 +22,6 @@ print(os.getcwd())
 
 Das Ergebnis dieser Funktion ist der **absolute Pfad** des aktuellen Verzeichnisses.
 
----
 
 ## Arbeitsverzeichnis ändern
 
@@ -40,7 +38,6 @@ print(os.getcwd())
 Hier wird das Arbeitsverzeichnis in den Unterordner `sub_dir` geändert. Auch hier wird der absolute Pfad des neuen 
 Arbeitsverzeichnisses zurückgegeben.
 
----
 
 ## Inhalte eines Verzeichnisses auflisten
 
@@ -63,7 +60,6 @@ file_list.sort()
 print(file_list)
 ```
 
----
 
 ## Überprüfen, ob eine Datei existiert
 
@@ -77,7 +73,6 @@ print(os.path.isfile("file1.txt"))  # Gibt True zurück, falls die Datei existie
 print(os.path.isdir("dir"))         # Gibt True zurück, falls "dir" ein Ordner ist
 ```
 
----
 
 ## Existenz eines Pfades prüfen
 
@@ -91,7 +86,6 @@ print(os.path.exists("file1.txt"))  # Gibt True zurück, wenn die Datei existier
 print(os.path.exists("file4.txt"))  # Gibt False zurück, wenn die Datei nicht existiert
 ```
 
----
 
 ## Verzeichnis erstellen
 
@@ -114,7 +108,6 @@ os.makedirs("dir3/sub")
 
 Dies erstellt sowohl das Verzeichnis `dir3` als auch das Unterverzeichnis `sub` darin, falls diese noch nicht existieren.
 
----
 
 ## Verzeichnis löschen
 
@@ -129,7 +122,6 @@ os.rmdir("dir2")
 Wenn der Ordner Dateien oder Unterordner enthält, muss erst alles darin gelöscht werden, bevor der Ordner 
 selbst gelöscht werden kann.
 
----
 
 ## Datei oder Verzeichnis umbenennen
 
@@ -143,7 +135,6 @@ os.replace("dir3", "test_name")
 
 Dieser Code benennt den Ordner `dir3` in `test_name` um, der Inhalt des Ordners bleibt dabei unverändert.
 
----
 
 ## Dateien löschen
 
@@ -158,7 +149,6 @@ os.remove("file1.txt")
 
 **Hinweis**: Es ist oft sicherer, die Datei zu überschreiben, anstatt sie direkt zu löschen, insbesondere bei wichtigen Daten.
 
----
 
 ## Zusammenfassung
 

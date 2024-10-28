@@ -15,7 +15,6 @@ während es in anderen Programmiersprachen üblich ist, dass diese zwingend erfo
 Wenn eine Variable deklariert wird, kann man hinter den Variablennamen einen Doppelpunkt und dann den Typ schreiben, bevor
 das Gleichheitszeichen folgt.
 
----
 
 ## Typehints für primitive Datentypen
 
@@ -46,7 +45,6 @@ from typing import Optional
 my_optional_float: Optional[float] = None
 ```
 
----
 
 ## Typehints für Listen
 
@@ -63,7 +61,6 @@ my_int_list: List[int] = [1, 2, 3, 4]
 my_mixed_list: List[int | float] = [1, 2, 3.14, 4]
 ```
 
----
 
 ## Typehints für Funktionen
 
@@ -85,7 +82,6 @@ def is_prime(n: int) -> bool:
 
 ```
 
----
 
 ## Typehints für Tupel
 
@@ -99,7 +95,6 @@ from typing import Tuple
 my_tuple: Tuple[int, int, int] = (1, 2, 3)
 ```
 
----
 
 ## Typehints für Sets
 
@@ -113,7 +108,6 @@ from typing import Set
 my_set: Set[int] = {1, 2, 3}
 ```
 
----
 
 ## Typehints für Dictionaries
 
@@ -127,7 +121,6 @@ my_dict: Dict[int, str] = {0: "Hello", 1: "World"}
 # der erste Typ in den eckigen Klammern ist für die Keys und der zweite für die Values.
 ```
 
----
 
 ## Probleme mit Typehints
 
@@ -152,7 +145,6 @@ from __future__ import annotations
 
 Dies sorgt dafür, dass die Typehints intern als Strings betrachtet und deswegen vollständig ignoriert werden.
 
----
 
 ## Wann Typehints verwenden?
 

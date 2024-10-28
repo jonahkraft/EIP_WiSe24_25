@@ -7,7 +7,6 @@ Empfohlene Skills: [Datentypen und Operatoren](01_datentypen_operationen.md), [K
 Funktionen sind in Python ein zentrales Konzept, um Code in wiederverwendbare Blöcke zu organisieren. 
 Eine Funktion kann Parameter annehmen, eine Aufgabe ausführen und einen Wert zurückgeben.
 
----
 
 ## `return`
 
@@ -35,7 +34,6 @@ print(result)  # Ausgabe: 7
 In diesem Beispiel nimmt die Funktion `add_digits` zwei Parameter (`a` und `b`), berechnet deren Summe und gibt 
 das Ergebnis mit `return` zurück.
 
----
 
 ## Parameterliste
 
@@ -60,7 +58,6 @@ print(result)  # Ausgabe: 24
 
 In diesem Beispiel nimmt die Funktion `multipliziere` drei Parameter (`a`, `b`, `c`) und multipliziert sie miteinander.
 
----
 
 ## Call by Reference
 
@@ -71,8 +68,8 @@ Für unveränderbare (immutable) Objekte wird **Call by Value**-ähnlich gearbei
 ### Beispiel (mit einer Liste, einem veränderbaren Datentyp):
 
 ```python
-def append_element(list_):
-    list_.append(4)
+def append_element(a):
+    a.append(4)
 
 my_list = [1, 2, 3]
 append_element(my_list)
@@ -87,14 +84,13 @@ In diesem Beispiel wird das Argument `my_list` als Referenz übergeben, und die 
 def add_one(x):
     x += 1
 
-zahl = 5
-add_one(zahl)
-print(zahl)  # Ausgabe: 5
+digit = 5
+add_one(digit)
+print(digit)
 ```
 
-In diesem Beispiel wird `zahl` nicht verändert, weil Ganzzahlen unveränderbare (immutable) Datentypen sind.
+In diesem Beispiel wird `digit` nicht verändert, weil Ganzzahlen unveränderbare (immutable) Datentypen sind.
 
----
 
 ## Standardwerte für Parameter
 
@@ -121,7 +117,6 @@ greeeting()         # Ausgabe: Hallo, Welt!
 In diesem Beispiel hat der Parameter `name` einen Standardwert `"Welt"`. Wenn kein Argument übergeben wird, 
 wird dieser Standardwert verwendet.
 
----
 
 ## Lambda-Funktionen
 
@@ -154,11 +149,8 @@ print(even_digits)  # Ausgabe: [2, 4]
 
 Wenn dir filter() noch nicht bekannt ist, findest du eine Erklärung in der [Datei zu nützlichen Funktionen](10_nuetzliche_funktionen.md).
 
----
 
-## `*args` und `**kwargs`
-
-### `*args`
+## `*args`
 
 `*args` ermöglicht es, eine variable Anzahl von Positionsargumenten an eine Funktion zu übergeben. 
 Die Argumente werden in einem Tupel [(siehe Datei zu Tupeln)](13_tupel_dictionaries_sets.md) gesammelt, das innerhalb der Funktion verwendet werden kann.
@@ -183,9 +175,8 @@ def calculate_sum(*args):
 print(calculate_sum(1, 2, 3))
 ```
 
----
 
-### `**kwargs`
+## `**kwargs`
 
 `**kwargs` ermöglicht es, eine variable Anzahl von benannten Argumenten (Keyword Arguments) zu übergeben. 
 Diese werden in einem Dictionary [(siehe Datei zu Dictionaries)](13_tupel_dictionaries_sets.md) gesammelt.

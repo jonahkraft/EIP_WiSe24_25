@@ -7,7 +7,6 @@ Empfohlene Skills: [Datentypen und Operatoren](01_datentypen_operationen.md), [K
 Python bietet verschiedene Möglichkeiten, Dateien zu öffnen, zu lesen, zu schreiben und zu schließen. Im Folgenden
 werden die grundlegenden Techniken zur Dateiverarbeitung vorgestellt.
 
----
 
 ## Das `open()`-Statement
 
@@ -23,7 +22,6 @@ file = open("dateiname.txt", "modus")
 - **`"dateiname.txt"`**: Der Name der Datei, die du öffnen möchtest. Das Suffix muss nicht zwingend txt sein.
 - **`"modus"`**: Der Modus, in dem du die Datei öffnest (siehe unten).
 
----
 
 ## Modi zum Öffnen einer Datei
 
@@ -43,7 +41,6 @@ Python bietet verschiedene Modi zum Öffnen einer Datei:
 file = open("beispiel.txt", "r")  # Öffnet die Datei im Lesemodus
 ```
 
----
 
 ## Mit `with open()` Dateien öffnen
 
@@ -65,7 +62,6 @@ with open("beispiel.txt", "r") as file:
     print(content)  # Gibt den gesamten Inhalt der Datei aus
 ```
 
----
 
 ## Methoden zum Lesen einer Datei
 
@@ -96,7 +92,6 @@ with open("beispiel.txt", "r") as file:
     print(all_lines)  # Jede Zeile ist ein Element der Liste
 ```
 
----
 
 ## Iterieren über eine Datei
 
@@ -108,7 +103,6 @@ with open("beispiel.txt", "r") as file:
         print(line, end="")  # Gibt jede Zeile aus
 ```
 
----
 
 ## Schreiben in eine Datei
 
@@ -129,7 +123,6 @@ with open("output.txt", "a") as file:
     file.write("Dies wird am Ende der Datei hinzugefügt.\n")
 ```
 
----
 
 ## Datei schließen
 

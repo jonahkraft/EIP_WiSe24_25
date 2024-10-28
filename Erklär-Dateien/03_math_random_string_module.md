@@ -38,7 +38,6 @@ factorial = math.factorial(5)
 print("Die Fakultät von 5 ist:", factorial)  # Ausgabe: 120
 ```
 
----
 
 ## Einführung in das `random`-Modul
 
@@ -75,7 +74,6 @@ random.shuffle(digits)
 print("Gemischte Liste:", digits)
 ```
 
----
 
 ## Einführung in das `string`-Modul
 

@@ -10,7 +10,6 @@ Ein rekursiver Ansatz zerlegt ein Problem in kleinere Unterprobleme, bis eine be
 die sogenannte **Basisbedingung**). Diese Methode eignet sich besonders für Probleme, die sich wiederholende Muster oder 
 hierarchische Strukturen haben.
 
----
 
 ## Aufbau einer rekursiven Funktion
 
@@ -30,7 +29,6 @@ def rekursive_funktion(parameter):
         return rekursive_funktion(veränderte_parameter)
 ```
 
----
 
 ## Beispiel: Fakultät berechnen
 
@@ -50,7 +48,6 @@ def factorial(n):
 
 ergebnis = factorial(5)
 print(ergebnis)  # Ausgabe: 120
-
 ```
 
 Die Berechnung erfolgt hier rekursiv:
@@ -61,7 +58,6 @@ Die Berechnung erfolgt hier rekursiv:
 - `fakultaet(1)` → `1 * fakultaet(0)`
 - `fakultaet(0)` → `1`
 
----
 
 ## Beispiel: Fibonacci-Zahlen
 
@@ -81,8 +77,7 @@ def fibonacci(n):
         return fibonacci(n - 1) + fibonacci(n - 2)  # Rekursiver Fall
 
 result = fibonacci(6)
-print(result)  # Ausgabe: 8
-
+print(result)
 ```
 
 Die Berechnung erfolgt rekursiv:
@@ -90,7 +85,6 @@ Die Berechnung erfolgt rekursiv:
 - `fibonacci(5)` → `fibonacci(4)` + `fibonacci(3)`
 - usw.
 
----
 
 ## Vorteile und Nachteile der Rekursion
 

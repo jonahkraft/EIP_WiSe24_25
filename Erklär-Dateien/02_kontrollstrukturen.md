@@ -37,7 +37,6 @@ else:
     print("x ist null")
 ```
 
----
 
 ## `while`-Schleifen
 
@@ -87,7 +86,6 @@ print(f"Du hast die gesuchte Zahl {secret_number} in {count} Versuchen erraten."
 
 ```
 
----
 
 ## for-Schleifen
 
@@ -154,8 +152,6 @@ for i in range(0, 10, 2):
 Man kann dieses Verhalten der for-Schleifen natürlich auch mit while-Schleifen darstellen. for-Schleifen haben
 aber einige Vorteile zum Beispiel um Umgang mit Listen (kommt später).
 
-
----
 
 ## Steueranweisungen: `break`, `continue` und `pass`
 

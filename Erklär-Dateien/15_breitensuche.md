@@ -10,7 +10,6 @@ Sie beginnt an einem Startknoten und erkundet alle benachbarten Knoten auf der g
 die nächste Ebene übergeht. In dieser Version speichern wir auch den Vorgänger jedes Knotens, um später den Pfad 
 zurückverfolgen zu können.
 
----
 
 ## Algorithmus
 
@@ -23,7 +22,6 @@ besuchte Knoten und ein Dictionary für Vorgänger.
      - Markiere den Knoten als besucht.
      - Speichere den aktuellen Knoten als Vorgänger für alle unbesuchten Nachbarknoten und füge diese zur Warteschlange hinzu.
 
----
 
 ## Code
 

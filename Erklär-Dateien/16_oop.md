@@ -10,7 +10,6 @@ Die objektorientierte Programmierung (OOP) ist ein Programmierparadigma, das auf
 basiert. In Python ist die OOP ein zentraler Bestandteil und bietet eine flexible und leistungsstarke Möglichkeit, 
 komplexe Software zu entwickeln. Dieser Abschnitt führt in die Grundlagen der OOP ein, einschließlich magischer Methoden, Getter und Setter.
 
----
 
 ## Grundlagen der OOP
 
@@ -44,7 +43,6 @@ print(my_car.description())  # Ausgabe: Marke: BMW, Farbe: rot
 Der Konstruktor ist eine spezielle Methode, die beim Erstellen eines Objekts automatisch aufgerufen wird. In Python heißt 
 der Konstruktor `__init__`. Er wird verwendet, um die Attribute eines Objekts zu initialisieren.
 
----
 
 ## Die Rolle von `self` in Python-Klassen
 
@@ -58,7 +56,6 @@ Was ist `self`?
 - Es verweist immer auf das Objekt, das die Methode aufruft.
 - Durch `self` können Methoden auf die Instanzvariablen (auch Attribute genannt) und andere Methoden der Klasse zugreifen.
 
----
 
 ## Magische Methoden (Dunder-Methods)
 
@@ -112,7 +109,6 @@ p4 = p1 + p3
 print(p4)  # Ausgabe: Punkt(4, 6)
 ```
 
----
 
 ## Getter und Setter
 
@@ -164,7 +160,6 @@ p.set_name("Anna")  # Erfolgreich geändert
 print(p.get_name())  # Ausgabe: Anna
 ```
 
----
 
 ## Call by Reference
 

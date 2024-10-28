@@ -8,7 +8,6 @@ Grundkenntnisse in [List Comprehension](06_list_comprehension.md)
 Zweidimensionale Listen, auch bekannt als Listen von Listen, sind eine Möglichkeit, Daten in einer tabellarischen Form zu 
 organisieren. Sie können verwendet werden, um Matrizen, Tabellen oder ähnliche Datenstrukturen darzustellen.
 
----
 
 ## Erstellung von zweidimensionalen Listen
 
@@ -27,7 +26,6 @@ matrix = [
 
 In diesem Beispiel besteht die `matrix` aus 3 Zeilen und 3 Spalten, wobei jede innere Liste eine Zeile darstellt.
 
----
 
 ## Zugriff auf Elemente in zweidimensionalen Listen
 
@@ -40,7 +38,6 @@ print(matrix[0][1])  # Zugriff auf die erste Zeile, zweite Spalte (Ausgabe: 2)
 print(matrix[2][2])  # Zugriff auf die dritte Zeile, dritte Spalte (Ausgabe: 9)
 ```
 
----
 
 ## Negativer Index
 
@@ -51,7 +48,6 @@ print(matrix[-1][-1])  # Zugriff auf das letzte Element (Ausgabe: 9)
 print(matrix[-2][-3])  # Zugriff auf das Element in der zweiten letzten Zeile und dritten letzten Spalte (Ausgabe: 5)
 ```
 
----
 
 ## Iteration über zweidimensionale Listen
 
@@ -74,7 +70,6 @@ for row in matrix:
 7 8 9 
 ```
 
----
 
 ## Modifizieren von Elementen in einer zweidimensionalen Liste
 
@@ -87,7 +82,6 @@ matrix[1][1] = 10  # Ändere das Element in der zweiten Zeile und zweiten Spalte
 print(matrix)  # Ausgabe: [[1, 2, 3], [4, 10, 6], [7, 8, 9]]
 ```
 
----
 
 ## Slicing in zweidimensionalen Listen
 

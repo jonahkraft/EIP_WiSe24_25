@@ -9,7 +9,6 @@ Die Idee der dynamischen Programmierung ist es, Zwischenergebnisse zu speichern 
 Kurz gesagt wird ein Memory angelegt, also ein Dictionary, das als Keys jeweils n und als Values den Funktionswert von n
 speichert.
 
----
 
 ## Beispiel: Fibonacci
 
@@ -44,7 +43,6 @@ Wenn Funktionswerte bereits bekannt sind, werden sie aus dem Memory gelesen. Ans
 ins Memory geschrieben. Da Dictionaries mutable sind, greift jeder Rekursionsaufruf auf dasselbe Dictionary zu und es muss
 nicht returned werden!
 
----
 
 ## Ein weiterer Anwendungsfall
 

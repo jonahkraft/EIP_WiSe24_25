@@ -9,7 +9,6 @@ Vererbung ist ein zentrales Konzept der objektorientierten Programmierung (OOP).
 erstellen, die Eigenschaften und Methoden einer bestehenden Klasse erbt. Dies fördert die Wiederverwendbarkeit von 
 Code und reduziert Redundanzen.
 
----
 
 ## Was ist Vererbung?
 
@@ -30,7 +29,6 @@ class Kindklasse(Elternklasse):
 - Die Kindklasse erbt alle Eigenschaften und Methoden der Elternklasse.
 - Sie kann eigene Methoden und Attribute hinzufügen oder geerbte Methoden überschreiben.
 
----
 
 ## Einfaches Beispiel:
 
@@ -58,7 +56,6 @@ dog1.bark()   # Output: Rex says: Woof!
 - `Dog` erbt von `Animal`. Das bedeutet, dass alle Hunde, die wir erstellen, die Methode `move()` und das Attribut `name` von der Klasse `Animal` haben.
 - Die Methode `bark()` ist jedoch spezifisch für die Klasse `Dog`.
 
----
 
 ## Der `super()`-Befehl
 
@@ -100,7 +97,6 @@ dog1.move()
 - Die Methode `move()` wird in der Kindklasse `Dog` überschrieben. Zuerst wird die Methode der Elternklasse aufgerufen 
 - (`super().move()`), dann wird die zusätzliche Logik der Kindklasse hinzugefügt.
 
----
 
 ## Überschreiben von Methoden
 
@@ -130,7 +126,6 @@ bird1.move()  # Ausgabe: Der Vogel fliegt.
 - Die Methode `move()` wurde in der Klasse `Bird` überschrieben. Wenn wir ein Objekt von `Bird` aufrufen, wird die 
 - neue Implementierung verwendet, obwohl `Bird` von `Animal` erbt.
 
----
 
 ## Die `isinstance()`-Funktion
 
@@ -156,7 +151,6 @@ print(isinstance(dog1, object))  # True, da alle Klassen von object abstammen
 - `isinstance()` gibt `True` zurück, wenn das Objekt von der angegebenen Klasse oder einer Unterklasse ist.
 - Da `Dog` von `Animal` erbt, ist `dog1` auch eine Instanz von `Animal`.
 
----
 
 ## Die `issubclass()`-Funktion
 
