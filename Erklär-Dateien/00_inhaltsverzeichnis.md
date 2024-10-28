@@ -12,7 +12,6 @@
 - Nutzereingaben
 - Variablen benennen
 
----
 
 ## Kontrollstrukturen
 
@@ -23,7 +22,6 @@
 - for-Schleifen
 - Steueranweisungen: `break`, `continue` und `pass`
 
----
 
 ## Die Module math, random und string
 
@@ -33,7 +31,6 @@
 - Einführung in das `random`-Modul
 - Einführung in das `string`-Modul
 
----
 
 ## Listen
 
@@ -46,7 +43,6 @@
 - `copy()` und `deepcopy()`
 - Slicing
 
----
 
 ## Zweidimensionale Listen
 
@@ -59,7 +55,6 @@
 - Modifizieren von Elementen in einer zweidimensionalen Liste
 - Slicing in zweidimensionalen Listen
 
----
 
 ## List Comprehension
 
@@ -68,7 +63,6 @@
 - Herleitung
 - Einige Beispiele
 
----
 
 ## Dateien in Python einlesen und schreiben
 
@@ -82,7 +76,6 @@
 - Schreiben in eine Datei
 - Datei schließen
 
----
 
 ## Arbeiten mit dem `os`-Modul
 
@@ -99,7 +92,6 @@
 - Dateien löschen
 - Zusammenfassung
 
----
 
 ## Funktionen
 
@@ -112,7 +104,6 @@
 - Lambda-Funktionen
 - `*args` und `**kwargs`
 
----
 
 ## Nützliche eingebaute Funktionen
 
@@ -129,7 +120,6 @@
 - `any()`
 - `all()`
 
----
 
 ## Rekursion
 
@@ -140,7 +130,6 @@
 - Beispiel: Fibonacci-Zahlen
 - Vorteile und Nachteile der Rekursion
 
----
 
 ## Backtracking
 
@@ -150,7 +139,6 @@
 - Beispiel: Das N-Damen-Problem
 - Zusammenfassung
 
----
 
 ## Tupel, Dictionaries und Sets
 
@@ -161,7 +149,6 @@
 - Sets
 - Unterschiede zwischen Tupel, Dictionary und Set
 
----
 
 ## Dynamische Programmierung
 
@@ -170,7 +157,6 @@
 - Beispiel: Fibonacci
 - Ein weiterer Anwendungsfall
 
----
 
 ## Breitensuche (Breadth-First Search, BFS)
 
@@ -179,7 +165,6 @@
 - Algorithmus
 - Code
 
----
 
 ## Objektorientierte Programmierung (OOP)
 
@@ -191,7 +176,6 @@
 - Getter und Setter
 - Call by Reference
 
----
 
 ## Vererbung
 
@@ -204,7 +188,6 @@
 - Die `isinstance()`-Funktion
 - Die `issubclass()`-Funktion
 
----
 
 ## Fortgeschrittene OOP
 
@@ -216,7 +199,6 @@
 - Abstrakte Klassen
 - @abstractmethod
 
----
 
 ## Exceptions
 
@@ -226,7 +208,6 @@
 - Catching Exceptions
 - Eigene Exceptions erstellen
 
----
 
 ## Eine Einführung zu Typehints
 
