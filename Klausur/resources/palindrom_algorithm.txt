@@ -1,0 +1,29 @@
+def isPalindrom(Wort)
+
+    if Wortlänge gerade do
+        for index, zeichen in Wort do
+            if index < len(Wort) // 2 do
+                füge zeichen dem Stapel hinzu
+            else do
+                if zeichen != oberstes Stapelelement do
+                    return False
+                else do
+                    entferne oberstes Stapelelement
+                end
+            end
+        end
+        return True
+
+    else do
+        for index, zeichen in Wort do
+            if index < len(Wort) // 2 do
+                füge zeichen dem Stapel hinzu
+            elif index > len(Wort) // 2 do
+                if zeichen != oberstes Stapelelement do
+                    return False
+                else do
+                    entferne oberstes Stapelelement
+                end
+            end
+        end
+        return True
