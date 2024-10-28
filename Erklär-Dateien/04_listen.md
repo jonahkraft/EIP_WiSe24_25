@@ -42,8 +42,8 @@ Außerdem gibt es die folgenden Funktionen, die im Kontext mit Listen hilfreich 
 
 ```python
 digits = [1, 2, 3, 4, 5]
-print(len(digits))  # Ausgabe: 5
-print(sum(digits))  # Ausgabe: 15
+print(len(digits))  
+print(sum(digits))  
 ```
 
 
@@ -91,13 +91,13 @@ for index, element in enumerate(colors, start=1):
 ```python
 # Mutable Datentyp
 my_list = [1, 2, 3]
-my_list[0] = 100  # Änderungen sind erlaubt
-print(my_list)  # Ausgabe: [100, 2, 3]
+my_list[0] = 100 
+print(my_list)  
 
 # Immutable Datentyp
 my_string = "Hallo"
 # my_string[0] = "h"  # Dies würde einen Fehler verursachen
-print(my_string)  # Ausgabe: "Hallo"
+print(my_string)  
 ```
 
 
@@ -112,7 +112,7 @@ print(my_string)  # Ausgabe: "Hallo"
 original_list = [1, 2, [3, 4]]
 flat_copy = original_list.copy()
 flat_copy[0] = 100
-print(original_list)  # Ausgabe: [1, 2, [3, 4]]
+print(original_list)
 ```
 
 - **`deepcopy()`**: Erstellt eine tiefe Kopie einer Liste. Änderungen an der tiefen Kopie beeinflussen die ursprüngliche
@@ -125,7 +125,7 @@ import copy
 original_list = [1, 2, [3, 4]]
 deep_copy = copy.deepcopy(original_list)
 deep_copy[2][0] = 300
-print(original_list)  # Ausgabe: [1, 2, [3, 4]]
+print(original_list)
 ```
 
 
@@ -145,13 +145,13 @@ liste[start:stop:step]
 zahlen = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 # Zugriff auf die Elemente von Index 2 bis 5 (5 ist ausgeschlossen)
-short_list = zahlen[2:5]  # Ausgabe: [2, 3, 4]
+short_list = zahlen[2:5] 
 
 # Zugriff auf alle Elemente mit Schrittweite 2
-half_list = zahlen[::2]  # Ausgabe: [0, 2, 4, 6, 8]
+half_list = zahlen[::2]  
 
 # Zugriff auf die letzten 3 Elemente
-last_elements = zahlen[-3:]  # Ausgabe: [7, 8, 9]
+last_elements = zahlen[-3:] 
 ```
 
 ---

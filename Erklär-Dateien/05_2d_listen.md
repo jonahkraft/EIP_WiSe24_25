@@ -16,7 +16,6 @@ Eine zweidimensionale Liste wird erstellt, indem mehrere Listen als Elemente inn
 ### Beispiel:
 
 ```python
-# Erstellung einer 3x3 Matrix
 matrix = [
     [1, 2, 3],
     [4, 5, 6],
@@ -34,8 +33,8 @@ Der Zugriff auf die Elemente erfolgt über den Zeilen- und Spaltenindex. Der ers
 ### Beispiel:
 
 ```python
-print(matrix[0][1])  # Zugriff auf die erste Zeile, zweite Spalte (Ausgabe: 2)
-print(matrix[2][2])  # Zugriff auf die dritte Zeile, dritte Spalte (Ausgabe: 9)
+print(matrix[0][1])  # Zugriff auf die erste Zeile, zweite Spalte 
+print(matrix[2][2])  # Zugriff auf die dritte Zeile, dritte Spalte 
 ```
 
 
@@ -44,8 +43,8 @@ print(matrix[2][2])  # Zugriff auf die dritte Zeile, dritte Spalte (Ausgabe: 9)
 Du kannst auch negative Indizes verwenden, um von hinten auf die Listen zuzugreifen.
 
 ```python
-print(matrix[-1][-1])  # Zugriff auf das letzte Element (Ausgabe: 9)
-print(matrix[-2][-3])  # Zugriff auf das Element in der zweiten letzten Zeile und dritten letzten Spalte (Ausgabe: 5)
+print(matrix[-1][-1])  # Zugriff auf das letzte Element 
+print(matrix[-2][-3])  # Zugriff auf das Element in der zweiten letzten Zeile und dritten letzten Spalte
 ```
 
 
@@ -59,7 +58,7 @@ Du kannst mit verschachtelten `for`-Schleifen über zweidimensionale Listen iter
 for row in matrix:
     for element in row:
         print(element, end=' ')
-    print()  # Neue Zeile nach jeder Zeile der Matrix
+    print()
 ```
 
 **Ausgabe:**
@@ -79,7 +78,7 @@ Du kannst die Elemente einer zweidimensionalen Liste ändern, indem du sie über
 
 ```python
 matrix[1][1] = 10  # Ändere das Element in der zweiten Zeile und zweiten Spalte
-print(matrix)  # Ausgabe: [[1, 2, 3], [4, 10, 6], [7, 8, 9]]
+print(matrix)  
 ```
 
 
@@ -92,11 +91,11 @@ Du kannst Slicing auch auf zweidimensionale Listen anwenden, um Teile der Daten 
 ```python
 # Zugriff auf die ersten beiden Zeilen
 part_matrix = matrix[:2]
-print(part_matrix)  # Ausgabe: [[1, 2, 3], [4, 10, 6]]
+print(part_matrix)  
 
 # Zugriff auf die ersten beiden Spalten jeder Zeile
-column_part = [zeile[:2] for zeile in matrix]  # siehe List Comprehension
-print(column_part)  # Ausgabe: [[1, 2], [4, 10], [7, 8]]
+column_part = [row[:2] for row in matrix]  # siehe List Comprehension
+print(column_part)  
 ```
 
 ---

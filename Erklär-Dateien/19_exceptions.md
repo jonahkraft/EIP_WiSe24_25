@@ -44,7 +44,7 @@ finally:
 
 ```python
 try:
-    ergebnis = 10 / 0  # Division durch Null
+    result = 10 / 0  # Division durch Null
 except ZeroDivisionError:
     print("Fehler: Division durch Null!")
 ```

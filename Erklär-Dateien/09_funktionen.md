@@ -28,7 +28,7 @@ def add_digits(a, b):
     return a + b
 
 result = add_digits(3, 4)
-print(result)  # Ausgabe: 7
+print(result)  
 ```
 
 In diesem Beispiel nimmt die Funktion `add_digits` zwei Parameter (`a` und `b`), berechnet deren Summe und gibt 
@@ -53,7 +53,7 @@ def multiply(a, b, c):
     return a * b * c
 
 result = multiply(2, 3, 4)
-print(result)  # Ausgabe: 24
+print(result)  
 ```
 
 In diesem Beispiel nimmt die Funktion `multipliziere` drei Parameter (`a`, `b`, `c`) und multipliziert sie miteinander.
@@ -73,7 +73,7 @@ def append_element(a):
 
 my_list = [1, 2, 3]
 append_element(my_list)
-print(my_list)  # Ausgabe: [1, 2, 3, 4]
+print(my_list)  
 ```
 
 In diesem Beispiel wird das Argument `my_list` als Referenz übergeben, und die Funktion `append_element` ändert die ursprüngliche Liste.
@@ -110,8 +110,8 @@ def function_name(param1=standardwert):
 def greeeting(name="Welt"):
     print(f"Hallo, {name}!")
 
-greeeting("Rick Astley")  # Ausgabe: Hallo, Rick Astley!
-greeeting()         # Ausgabe: Hallo, Welt!
+greeeting("Rick Astley")  
+greeeting()         
 ```
 
 In diesem Beispiel hat der Parameter `name` einen Standardwert `"Welt"`. Wenn kein Argument übergeben wird, 
@@ -136,7 +136,7 @@ lambda argumente: ausdruck
 
 ```python
 sum_ = lambda a, b: a + b
-print(sum_(3, 5))  # Ausgabe: 8
+print(sum_(3, 5)) 
 ```
 
 2. Mit `filter()`:
@@ -144,7 +144,7 @@ print(sum_(3, 5))  # Ausgabe: 8
 ```python
 digits = [1, 2, 3, 4, 5]
 even_digits = list(filter(lambda x: x % 2 == 0, digits))
-print(even_digits)  # Ausgabe: [2, 4]
+print(even_digits)  
 ```
 
 Wenn dir filter() noch nicht bekannt ist, findest du eine Erklärung in der [Datei zu nützlichen Funktionen](10_nuetzliche_funktionen.md).
@@ -199,7 +199,7 @@ def greet(**kwargs):
     for key, value in kwargs.items():
         print(f"{key}: {value}")
 
-greet(vorname="Max", nachname="Mustermann")
+greet(first_name="Max", last_name="Mustermann")
 ```
 
 ---

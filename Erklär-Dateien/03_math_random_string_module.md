@@ -26,16 +26,16 @@ import math
 
 # Berechnung der Quadratwurzel
 angle = math.sqrt(16)
-print("Die Quadratwurzel von 16 ist:", angle)  # Ausgabe: 4.0
+print("Die Quadratwurzel von 16 ist:", angle)
 
 # Berechnung des Sinus eines Winkels
 angle = math.radians(30)  # Umwandlung von Grad in Bogenmaß
 sinus = math.sin(angle)
-print("Der Sinus von 30 Grad ist:", sinus)  # Ausgabe: 0.5
+print("Der Sinus von 30 Grad ist:", sinus) 
 
 # Berechnung der Fakultät
 factorial = math.factorial(5)
-print("Die Fakultät von 5 ist:", factorial)  # Ausgabe: 120
+print("Die Fakultät von 5 ist:", factorial)  
 ```
 
 
@@ -107,12 +107,12 @@ if char in string.ascii_letters:
 # Nutzung von string.capwords
 text = "hallo welt"
 text_with_capwords = string.capwords(text)
-print("Mit Großbuchstaben:", text_with_capwords)  # Ausgabe: Hallo Welt
+print("Mit Großbuchstaben:", text_with_capwords)  
 
 # Ersetzen von Zeichen in einer Zeichenfolge
 original = "Ich liebe Python!"
 replaced = original.replace("liebe", "mag")
-print("Ersetzter Text:", replaced)  # Ausgabe: Ich mag Python!
+print("Ersetzter Text:", replaced)  
 ```
 
 ---

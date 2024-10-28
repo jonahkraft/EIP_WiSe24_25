@@ -154,7 +154,7 @@ Anmerkung: <br> ist ein HTML-Tag, das einen Zeilenumbruch darstellt, da in der T
 Probier die Escape-Sequenzen selbst aus. Unicode-Zeichen wie Emojis kann man übrigens auch einfach direkt in einen String einfügen, ohne die
 Codierung anzugeben.
 
-### f-Strings.
+### f-Strings
 
 Strings, bei denen vor dem ersten Hochkomma ein f steht, sind f-Strings. Diese haben die besondere Eigenschaft, dass
 man andere Variablen in geschweiften Klammern einbinden kann.

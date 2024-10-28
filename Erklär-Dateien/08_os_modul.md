@@ -69,8 +69,8 @@ Mit `os.path.isfile()` kann überprüft werden, ob am angegebenen Pfad eine Date
 ### Beispiel:
 
 ```python
-print(os.path.isfile("file1.txt"))  # Gibt True zurück, falls die Datei existiert
-print(os.path.isdir("dir"))         # Gibt True zurück, falls "dir" ein Ordner ist
+print(os.path.isfile("file1.txt"))  # Gibt True zurück, wenn die Datei existiert
+print(os.path.isdir("dir"))         # Gibt True zurück, wenn "dir" ein Ordner ist
 ```
 
 

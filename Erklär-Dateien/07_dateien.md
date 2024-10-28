@@ -59,7 +59,7 @@ with open("dateiname.txt", "modus") as file:
 ```python
 with open("beispiel.txt", "r") as file:
     content = file.read()
-    print(content)  # Gibt den gesamten Inhalt der Datei aus
+    print(content) 
 ```
 
 
@@ -89,7 +89,7 @@ with open("beispiel.txt", "r") as file:
 ```python
 with open("beispiel.txt", "r") as file:
     all_lines = file.readlines()
-    print(all_lines)  # Jede Zeile ist ein Element der Liste
+    print(all_lines)
 ```
 
 
@@ -100,7 +100,7 @@ Du kannst auch über die Datei iterieren, um Zeile für Zeile zu lesen:
 ```python
 with open("beispiel.txt", "r") as file:
     for line in file:
-        print(line, end="")  # Gibt jede Zeile aus
+        print(line, end="") 
 ```
 
 
@@ -133,7 +133,7 @@ freigegeben werden.
 
 ```python
 file = open("beispiel.txt", "r")
-inhalt = file.read()
+content = file.read()
 file.close()  # Datei wird geschlossen
 ```
 

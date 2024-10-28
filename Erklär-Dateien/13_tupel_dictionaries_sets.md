@@ -31,10 +31,10 @@ one_tuple = (42,)  # Ein Tupel mit einem Element
 
 ```python
 my_tuple = (10, 20, 30)
-print(my_tuple[1])  # Ausgabe: 20
+print(my_tuple[1])  
 
 # Tupel sind unveränderlich, daher führt folgender Code zu einem Fehler:
-# mein_tupel[1] = 25  # Gibt einen Fehler aus
+# mein_tupel[1] = 25  
 ```
 
 ### Operationen mit Tupeln:
@@ -73,13 +73,13 @@ empty_dict = {}  # Ein leeres Dictionary
 
 ```python
 person = {'name': 'Anna', 'alter': 30, 'stadt': 'Berlin'}
-print(person['name'])  # Ausgabe: Anna
+print(person['name'])  
 
 # Wert ändern
 person['alter'] = 31
-print(person)  # Ausgabe: {'name': 'Anna', 'alter': 31, 'stadt': 'Berlin'}
+print(person)  
 
-# Neuen Schlüssel-Wert hinzufügen
+# Neues Schlüssel-Wert-Paar hinzufügen
 person['beruf'] = 'Ingenieurin'
 ```
 
@@ -121,11 +121,11 @@ empty_set = set()  # Ein leeres Set (Achtung: {} erzeugt ein leeres Dictionary!)
 
 ```python
 digit_set = {1, 2, 3, 4, 4, 5}  # Doppelte 4 wird automatisch entfernt
-print(digit_set)  # Ausgabe: {1, 2, 3, 4, 5}
+print(digit_set) 
 
 # Element hinzufügen
 digit_set.add(6)
-print(digit_set)  # Ausgabe: {1, 2, 3, 4, 5, 6}
+print(digit_set)
 
 # Element entfernen
 digit_set.remove(2)

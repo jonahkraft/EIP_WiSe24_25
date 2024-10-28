@@ -29,15 +29,11 @@ class Car:
         self.brand = brand  # Attribut 'brand'
         self.color = color  # Attribut 'color'
 
-    # Methode: Gibt Details des Autos aus
     def description(self):
         return f"Marke: {self.brand}, Farbe: {self.color}"
 
-# Erstellen eines Objekts der Klasse Car
 my_car = Car("BMW", "rot")
-
-# Aufruf der Methode
-print(my_car.description())  # Ausgabe: Marke: BMW, Farbe: rot
+print(my_car.description())  
 ```
 
 Der Konstruktor ist eine spezielle Methode, die beim Erstellen eines Objekts automatisch aufgerufen wird. In Python heißt 
@@ -92,21 +88,20 @@ class Point:
     def __add__(self, other_point):
         return Point(self.x + other_point.x, self.y + other_point.y)
 
-# Objekte erstellen
 p1 = Point(1, 2)
 p2 = Point(1, 2)
 p3 = Point(3, 4)
 
 # __str__
-print(p1)  # Ausgabe: Punkt(1, 2)
+print(p1)
 
 # __eq__ für Gleichheit
-print(p1 == p2)  # Ausgabe: True
-print(p1 == p3)  # Ausgabe: False
+print(p1 == p2)  
+print(p1 == p3)  
 
 # __add__ für Addition
 p4 = p1 + p3
-print(p4)  # Ausgabe: Punkt(4, 6)
+print(p4)  
 ```
 
 
@@ -124,8 +119,8 @@ class Person:
         self.age = age
 
 p = Person("Lena", 25)
-print(p.age)  # Ausgabe: 25
-p.age = 30  # Attribut direkt ändern
+print(p.age) 
+p.age = 30
 ```
 
 - **Getter**: Liefert den Wert eines Attributs.
@@ -153,11 +148,10 @@ class Person:
     def set_alter(self, value):
         self.age = value
 
-# Nutzung
 p = Person("Lena", 25)
-print(p.get_name())  # Ausgabe: Lena
-p.set_name("Anna")  # Erfolgreich geändert
-print(p.get_name())  # Ausgabe: Anna
+print(p.get_name())  
+p.set_name("Anna")  
+print(p.get_name())  
 ```
 
 
@@ -179,7 +173,7 @@ def deposit_money(account, amount):
 my_account = Account(100)
 deposit_money(my_account, 50)
 
-print(my_account.balance)  # Ausgabe: 150
+print(my_account.balance)  
 ```
 
 In diesem Beispiel wird das Objekt `my_account` per Referenz übergeben, und Änderungen am Kontostand innerhalb der 

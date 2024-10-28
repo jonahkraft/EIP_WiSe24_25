@@ -46,8 +46,8 @@ def factorial(n):
     else:
         return n * factorial(n - 1)  # Rekursiver Fall
 
-ergebnis = factorial(5)
-print(ergebnis)  # Ausgabe: 120
+result = factorial(5)
+print(result)  
 ```
 
 Die Berechnung erfolgt hier rekursiv:
@@ -69,10 +69,8 @@ Die Fibonacci-Zahlen sind eine Folge, in der jede Zahl die Summe der beiden vorh
 
 ```python
 def fibonacci(n):
-    if n == 0:
-        return 0  # Basisfall
-    elif n == 1:
-        return 1  # Basisfall
+    if n < 2:
+        return n  # Basisfall
     else:
         return fibonacci(n - 1) + fibonacci(n - 2)  # Rekursiver Fall
 

@@ -14,9 +14,9 @@ Die `sum()`-Funktion berechnet die Summe aller Elemente in einem iterierbaren Ob
 ### Beispiel:
 
 ```python
-zahlen = [1, 2, 3, 4, 5]
-gesamt = sum(zahlen)
-print("Die Summe ist:", gesamt)  # Ausgabe: 15
+digits = [1, 2, 3, 4, 5]
+sum_of_digits = sum(digits)
+print("Die Summe ist:", sum_of_digits)  
 ```
 
 
@@ -27,9 +27,9 @@ Die `max()`-Funktion gibt das größte Element in einem iterierbaren Objekt zur�
 ### Beispiel:
 
 ```python
-zahlen = [1, 2, 3, 4, 5]
-groesste_zahl = max(zahlen)
-print("Die größte Zahl ist:", groesste_zahl)  # Ausgabe: 5
+digits = [1, 2, 3, 4, 5]
+biggest_int = max(digits)
+print("Die größte Zahl ist:", biggest_int)  
 ```
 
 
@@ -42,7 +42,7 @@ Die `min()`-Funktion gibt das kleinste Element in einem iterierbaren Objekt zur�
 ```python
 digits = [1, 2, 3, 4, 5]
 smallest_digit = min(digits)
-print("Die kleinste Zahl ist:", smallest_digit)  # Ausgabe: 1
+print("Die kleinste Zahl ist:", smallest_digit)  
 ```
 
 
@@ -57,7 +57,7 @@ das i-te Tupel aus den i-ten Elementen der übergebenen iterierbaren Objekte bes
 list1 = [1, 2, 3]
 list2 = ['a', 'b', 'c']
 combined = list(zip(list1, list2))
-print("Kombinierte Liste:", combined)  # Ausgabe: [(1, 'a'), (2, 'b'), (3, 'c')]
+print("Kombinierte Liste:", combined)
 ```
 
 
@@ -72,10 +72,6 @@ wobei jedes Tupel den Index und das Element enthält.
 my_list = ['a', 'b', 'c']
 for index, element in enumerate(my_list):
     print(f"Index: {index}, Wert: {element}")
-# Ausgabe: 
-# Index: 0, Wert: a
-# Index: 1, Wert: b
-# Index: 2, Wert: c
 ```
 
 
@@ -89,7 +85,7 @@ True oder False zurückgibt. Nur die Elemente, für die die Funktion True zurüc
 ```python
 digits = [1, 2, 3, 4, 5]
 even_digits = list(filter(lambda x: x % 2 == 0, digits))
-print("Gerade Zahlen:", even_digits)  # Ausgabe: [2, 4]
+print("Gerade Zahlen:", even_digits)  
 ```
 
 
@@ -103,7 +99,7 @@ Ergebnissen zurück.
 ```python
 digits = [1, 2, 3, 4, 5]
 squares = list(map(lambda x: x ** 2, digits))
-print("Quadrate:", squares)  # Ausgabe: [1, 4, 9, 16, 25]
+print("Quadrate:", squares)  
 ```
 
 
@@ -116,7 +112,7 @@ Die `sorted()`-Funktion gibt eine sortierte Liste der angegebenen iterierbaren O
 ```python
 digits = [5, 2, 3, 1, 4]
 sorted_digits = sorted(digits)
-print("Sortierte Liste:", sorted_digits)  # Ausgabe: [1, 2, 3, 4, 5]
+print("Sortierte Liste:", sorted_digits)  
 ```
 
 
@@ -129,7 +125,7 @@ Ansonsten gibt sie False zurück.
 
 ```python
 my_list = [False, False, True]
-print("Enthält die Liste True?", any(my_list))  # Ausgabe: True
+print("Enthält die Liste True?", any(my_list))  
 ```
 
 
@@ -141,7 +137,7 @@ Die `all()`-Funktion gibt True zurück, wenn alle Elemente in einem iterierbaren
 
 ```python
 my_list = [True, True, True]
-print("Enthält die Liste nur True?", all(my_list))  # Ausgabe: True
+print("Enthält die Liste nur True?", all(my_list))  
 ```
 
 ---

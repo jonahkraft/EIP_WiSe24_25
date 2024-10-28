@@ -46,10 +46,9 @@ class Dog(Animal):
     def bark(self):
         print(f"{self.name} says: Woof!")
 
-# Instantiation
 dog1 = Dog("Rex")
-dog1.move()   # Output: Rex is moving.
-dog1.bark()   # Output: Rex says: Woof!
+dog1.move()   
+dog1.bark()   
 ```
 
 ### Erklärung:
@@ -114,12 +113,11 @@ class Bird(Animal):
     def move(self):
         print("Der Vogel fliegt.")
 
-# Instanziierung
 animal1 = Animal()
 bird1 = Bird()
 
-animal1.move()   # Ausgabe: Das Tier bewegt sich.
-bird1.move()  # Ausgabe: Der Vogel fliegt.
+animal1.move()   
+bird1.move()  
 ```
 
 ### Erklärung:
@@ -142,8 +140,8 @@ class Dog(Animal):
 
 dog1 = Dog()
 
-print(isinstance(dog1, Dog))  # True
-print(isinstance(dog1, Animal))  # True
+print(isinstance(dog1, Dog))  
+print(isinstance(dog1, Animal)) 
 print(isinstance(dog1, object))  # True, da alle Klassen von object abstammen
 ```
 
@@ -165,9 +163,9 @@ class Animal:
 class Dog(Animal):
     pass
 
-print(issubclass(Dog, Animal))  # True
+print(issubclass(Dog, Animal))  
 print(issubclass(Dog, object))  # True, da alle Klassen von object abstammen
-print(issubclass(Animal, Dog))  # False
+print(issubclass(Animal, Dog))  
 ```
 
 ---
