@@ -22,6 +22,14 @@ one_tuple = (42,)  # Ein Tupel mit einem Element
 # Achtung: das Komma ist notwendig, da Python die Klammern sonst für redundant hält und one_tuple den Integerwert 42 zuweist
 ```
 
+Die Klammern sind nicht notwendig, sofern man kein leeres Tupel erstellen möchte. Die folgenden Schreibweisen sind
+daher äquivalent, da ausschließlich das Komma ausschlaggebend ist:
+
+```python
+my_tuple = (1, 2, 3)
+my_other_tupel = 1, 2, 3
+```
+
 ### Eigenschaften:
 
 - **Unveränderlich**: Einmal erstellt, kann der Inhalt eines Tupels nicht mehr geändert werden.

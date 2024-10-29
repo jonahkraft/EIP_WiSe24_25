@@ -34,6 +34,25 @@ print(result)
 In diesem Beispiel nimmt die Funktion `add_digits` zwei Parameter (`a` und `b`), berechnet deren Summe und gibt 
 das Ergebnis mit `return` zurück.
 
+Mit `return` kann man ein Objekt zurückgeben. Daher stellt sich die Frage, wie man vorgehen kann, wenn man mehrere Objekte
+wie etwa einen int und einen bool zurückgeben möchte. Dies lässt sich realisieren, indem man alle Werte, die zurückgegeben
+werden sollen, in ein Tupel packt. Tupel sind kurz gesagt unveränderliche Listen. [Hier](13_tupel_dictionaries_sets.md) kannst
+du mehr darüber erfahren.
+
+### Beispiel
+
+```python
+def func(a):
+    even = a % 2 == 0
+    half = a // 2
+    return even, half
+
+my_int = 10
+is_even, half = func(my_int)
+```
+
+Hierbei werden die beiden Variablen beim `return` in ein Tupel verpackt, das in der untersten Zeile wieder entpackt wird.
+Dabei bekommt `is_even` den Wert am Index 0 des Tupels und `half` den Wert am Index 1 des Tupels.
 
 ## Parameterliste
 
