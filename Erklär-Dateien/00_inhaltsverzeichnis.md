@@ -9,6 +9,7 @@
 - `bool` (Boolesche Werte)
 - `str` (Strings)
 - `None`
+- Typehints
 - Nutzereingaben
 - Variablen benennen
 

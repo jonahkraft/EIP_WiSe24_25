@@ -187,6 +187,11 @@ if x is not None:  # für Abfragen auf None verwendet man das Schlüsselwort is.
     print(x + y)
 ```
 
+## Typehints
+
+In Python ist es nicht erforderlich, den Typ einer Variable anzugeben. Man kann dies trotzdem tun, um die Lesbarkeit und 
+Wartbarkeit des Codes zu verbessern. [Hier](20_typehints.md) wird das Thema ausführlicher erklärt. 
+
 
 ## Nutzereingaben
 
