@@ -16,6 +16,8 @@ einen Bullet Point geben (in Markdown einfach, indem man - davor schreibt). Acht
 einem Hashtag eingeleitet. Diese sollen ignoriert werden. Auch gibt es Überschriften, die mit ### beginnen. Diese sollen auch
 ignoriert werden.
 
+Denken Sie an Zeilenumbrüche.
+
 Speichern Sie das Ergebnis als Datei "00_inhaltsverzeichnis.md".
 
 ---
