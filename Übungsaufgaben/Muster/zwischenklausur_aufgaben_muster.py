@@ -37,18 +37,6 @@ def ggt(a: int, b: int) -> int:
 
 # Aufgabe 5
 
-
-def collatz(n: int) -> int:
-    if n == 1:
-        return 1
-    elif n % 2 == 0:
-        return collatz(n // 2)
-    else:
-        return collatz(3*n + 1)
-
-
-# Aufgabe 6
-
 memory = []
 # In dem Memory sollen Tupel gespeichert werden, die die Form (n, fibonacci(n)) haben
 
@@ -72,7 +60,7 @@ def fibonacci(n: int) -> int:
     return fib
 
 
-# Aufgabe 7
+# Aufgabe 6
 
 
 def avg(a: list, s: int = 0, i: int = 0) -> float:
@@ -83,7 +71,7 @@ def avg(a: list, s: int = 0, i: int = 0) -> float:
     else:
         return avg(a, s+a[i], i+1)
 
-# Aufgabe 8
+# Aufgabe 7
 
 
 def len_recursive(a: list, i: int = 0):
@@ -93,7 +81,7 @@ def len_recursive(a: list, i: int = 0):
         return len_recursive(a[1:], i + 1)
 
 
-# Aufgabe 9
+# Aufgabe 8
 
 
 def count_even(a: list, i: int = 0):
@@ -105,7 +93,7 @@ def count_even(a: list, i: int = 0):
         return count_even(a, i+1)
 
 
-# Aufgabe 10
+# Aufgabe 9
 
 
 def is_prime(n):

@@ -12,7 +12,7 @@ haben, bei der in jedem Eintrag steht, ob die Summe aus Zeilen- und Spaltenindex
 ## Aufgabe 2
 
 Schreiben Sie eine Funktion, die alle Elemente in einem Array um 1 nach links verschiebt.
-Sie sollen dabei kein weiteres Feld zur Hilfe nehmen.
+Sie sollen dabei kein weiteres Array zur Hilfe nehmen.
 
 ## Aufgabe 3
 
@@ -25,30 +25,25 @@ Schreiben Sie eine rekursive Funktion, die denn ggT von zwei Zahlen a, b berechn
 
 ## Aufgabe 5
 
-Auf einem vorherigen Übungsblatt haben Sie bereits die Collatz-Funktion in 
-iterativer Weise programmiert. Programmieren Sie diese nun rekursiv.
-
-## Aufgabe 6
-
 Sie kennen bereits die Fibonacci-Funktion. Implementieren Sie diese rekursiv. Warum steigt die Laufzeit bei größeren
 Werten für n so schnell?
 Überlegen Sie sich eine Möglichkeit, wie Sie bestimmte Werte speichern können, damit Ihr Programm Fibonacci(100) heute
 noch berechnet :)
 
-## Aufgabe 7
+## Aufgabe 6
 
 Schreiben Sie eine rekursive Funktion, 
 die eine Liste von Zahlen übergeben bekommt und das arithmetische Mittel zurückgibt.
 
-## Aufgabe 8
+## Aufgabe 7
 
 Schreiben Sie eine rekursive Funktion, die die Länge einer gegebenen Liste zurückgibt.
 
-## Aufgabe 9
+## Aufgabe 8
 
 Schreiben Sie eine rekursive Funktion, die die Anzahl der geraden Zahlen in einer Liste zurückgibt.
 
-## Aufgabe 10
+## Aufgabe 9
 
 Schreiben Sie eine rekursive Funktion, die die Anzahl der Primzahlen in einer Liste von Zahlen zurückgibt.
 
