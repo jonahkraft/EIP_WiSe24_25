@@ -18,7 +18,7 @@ besuchte Knoten und ein Dictionary für Vorgänger.
 2. **Schleife**: Solange die Warteschlange nicht leer ist:
    - Entferne den vordersten Knoten aus der Warteschlange.
    - Überprüfe, ob dieser Knoten bereits besucht wurde:
-     - Wenn nicht, verarbeite ihn (z.B. drucke ihn aus oder speichere ihn).
+     - Wenn nicht, verarbeite ihn.
      - Markiere den Knoten als besucht.
      - Speichere den aktuellen Knoten als Vorgänger für alle unbesuchten Nachbarknoten und füge diese zur Warteschlange hinzu.
 
@@ -27,27 +27,25 @@ besuchte Knoten und ein Dictionary für Vorgänger.
 
 ```python
 def bfs(graph, start):
-    visited = set()  # Menge der besuchten Knoten
-    queue = []  # Warteschlange mit dem Startknoten
-    predecessors = {}  # Dictionary zur Speicherung der Vorgänger
-    queue.append(start)  # Füge den Startknoten zur Warteschlange hinzu
+    visited = set()  
+    queue = []  
+    predecessors = {}  
+    queue.append(start)  
 
     while queue:
-        vertex = queue[0]  # Nimm den vordersten Knoten aus der Warteschlange
-        queue = queue[1:]  # Entferne den vordersten Knoten
+        vertex = queue.pop(0)
 
         if vertex not in visited:
-            visited.add(vertex)  # Markiere den Knoten als besucht
+            visited.add(vertex)
             
-            # Füge alle unbesuchten Nachbarknoten zur Warteschlange hinzu
             for neighbor in graph[vertex]:
                 if neighbor not in visited:
                     queue.append(neighbor)
-                    predecessors[neighbor] = vertex  # Speichere den Vorgänger
+                    predecessors[neighbor] = vertex
 
-    return predecessors  # Gebe das Dictionary der Vorgänger zurück
+    return predecessors
 
-# Beispielgraph
+
 graph = {
     'A': ['B', 'C'],
     'B': ['D', 'E'],
@@ -57,7 +55,6 @@ graph = {
     'F': []
 }
 
-# Aufruf der BFS-Funktion
 predecessors = bfs(graph, 'A')
 print("Vorgänger:", predecessors)
 ```

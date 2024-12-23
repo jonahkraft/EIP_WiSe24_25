@@ -1,7 +1,6 @@
 from typing import List
 
 # Aufgabe 1:
-# Das ist in der Tat ein sehr naiver Ansatz. Sollte man lieber lassen.
 # Die Liste A hat 25 Elemente und somit gibt es 25! (also etwa 1.551121e+25) Permutationen von A. Das sind sehr viele :)
 
 
