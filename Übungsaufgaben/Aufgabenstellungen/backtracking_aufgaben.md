@@ -12,7 +12,7 @@ Backtracking.
 
 In der Datei [binario.py](../resources/binario.py) finden Sie bereits Spielfelder für Ihren Code.
 
-[Hier](../Muster/Backtracking/backtracking_binario_muster.py) finden Sie die Musterlösung.
+[Hier](../Muster/Backtracking/backtracking_binario.py) finden Sie die Musterlösung.
 
 
 ## Quadrate
@@ -27,4 +27,4 @@ Warum ist das kein sinnvoller Ansatz?
 Aufgabe 2: Lösen Sie das Problem mit Backtracking, indem Sie die naive Idee so verändern, dass nicht mehr alle Möglichkeiten
 geprüft werden müssen und Sie in Sekundenschnelle 2 Lösungen finden.
 
-[Hier](../Muster/Backtracking/backtracking_squares_muster.py) finden Sie die Musterlösung.
+[Hier](../Muster/Backtracking/backtracking_squares.py) finden Sie die Musterlösung.

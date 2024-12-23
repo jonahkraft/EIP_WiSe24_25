@@ -26,8 +26,7 @@ Sie kennen bereits die Fibonacci-Funktion. Implementieren Sie diese rekursiv. Sk
 und die Laufzeit so drastisch zu verringern (das wird bei größeren Eingabewerten deutlich) und implementieren Sie diese.
 
 ### Aufgabe 2
-Schreiben Sie eine rekursive Funktion, die den Binomialkoeffizienten $\left(\begin{array}{c} n \\ k \end{array} \right)$
-mit der Formel $\left(\begin{array}{c} n \\ k \end{array} \right)$ = $\left(\begin{array}{c} n-1 \\ k-1 \end{array} \right) + \left(\begin{array}{c} n-1 \\ k \end{array} \right)$
+Schreiben Sie eine rekursive Funktion, die den Binomialkoeffizienten nCk mit der Formel nCk = (n-1)C(k-1) + (n-1)C(k)
 berechnet. Analog zu Aufgabe 5 sollen Sie sich überlegen, wie man mithilfe von dynamischer Programmierung die Laufzeit verbessern
 kann und dies implementieren.
 
@@ -138,7 +137,7 @@ In dieser Aufgabe befassen wir uns mit einem Parkettierungsproblem. Gegeben ist 
 Eine Zelle der Matrix bleibt ausgespart. Die übrigen Zellen sollen in L-förmigen Kacheln überdeckt werden, die je drei Zellen überdecken.
 
 ### Aufgabe 1
-Eine notwendige Bedingung dafür, dass dies möglich ist, ist, dass die Zahl $n^2 - 1 = (2^k)^2 -1 $ durch 3 teilbar ist.  
+Eine notwendige Bedingung dafür, dass dies möglich ist, ist, dass die Zahl n^2 - 1 = (2^k)^2 -1 durch 3 teilbar ist.  
 Beweisen Sie dies.
 
 ### Aufgabe 2
