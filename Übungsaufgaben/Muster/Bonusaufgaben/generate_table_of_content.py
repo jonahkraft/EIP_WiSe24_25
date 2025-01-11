@@ -6,7 +6,7 @@ def main():
     inside_codeblock = False  # Variable, um sich zu merken, ob man gerade in einem Codeblock ist
     cwd = os.getcwd()  # Die Datei ist darauf ausgelegt, in demselben Ordner wie die Markdown-Dateien zu sein. Ansonsten hier relativen Pfad angeben.
 
-    for i, f in enumerate(sorted(os.listdir(cwd))):
+    for f in sorted(os.listdir(cwd)):
 
         if f.startswith("00") or not f[0].isdigit():  # Das Inhaltsverzeichnis selbst und ggf. versteckte Dateien sollten ignoriert werden
             continue
