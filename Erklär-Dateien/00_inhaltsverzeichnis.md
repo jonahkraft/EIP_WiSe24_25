@@ -19,8 +19,9 @@
 > [Link](02_kontrollstrukturen.md)
 
 - `if`-Statements
+- Pattern Matching
 - `while`-Schleifen
-- for-Schleifen
+- `for`-Schleifen
 - Steueranweisungen: `break`, `continue` und `pass`
 
 
@@ -39,6 +40,7 @@
 
 - Einführung
 - Operationen mit Listen
+- Indexierung
 - Mit `for`-Schleifen über Listen iterieren
 - Unterschied zwischen mutablen und nicht-mutablen Datentypen
 - `copy()` und `deepcopy()`
@@ -51,7 +53,6 @@
 
 - Erstellung von zweidimensionalen Listen
 - Zugriff auf Elemente in zweidimensionalen Listen
-- Negativer Index
 - Iteration über zweidimensionale Listen
 - Modifizieren von Elementen in einer zweidimensionalen Liste
 - Slicing in zweidimensionalen Listen

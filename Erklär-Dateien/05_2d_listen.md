@@ -6,7 +6,8 @@ Grundkenntnisse in [List Comprehension](06_list_comprehension.md)
 ---
 
 Zweidimensionale Listen, auch bekannt als Listen von Listen, sind eine Möglichkeit, Daten in einer tabellarischen Form zu 
-organisieren. Sie können verwendet werden, um Matrizen, Tabellen oder ähnliche Datenstrukturen darzustellen.
+organisieren. Sie können verwendet werden, um Matrizen, Tabellen oder ähnliche Datenstrukturen darzustellen. Prinzipiell
+sind natürlich beliebig dimensionale Listen denkbar, aber wir fokussieren uns hier auf den Fall der zweidimensionalen Liste.
 
 
 ## Erstellung von zweidimensionalen Listen
@@ -36,9 +37,6 @@ Der Zugriff auf die Elemente erfolgt über den Zeilen- und Spaltenindex. Der ers
 print(matrix[0][1])  # Zugriff auf die erste Zeile, zweite Spalte 
 print(matrix[2][2])  # Zugriff auf die dritte Zeile, dritte Spalte 
 ```
-
-
-## Negativer Index
 
 Du kannst auch negative Indizes verwenden, um von hinten auf die Listen zuzugreifen.
 

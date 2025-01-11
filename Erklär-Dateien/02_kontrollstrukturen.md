@@ -37,6 +37,69 @@ else:
     print("x ist null")
 ```
 
+## Pattern Matching
+
+In einigen Fällen will man Zustände einer Variable abfragen. Hier kann man natürlich `if`-Statements verwenden,
+aber diese haben einen recht hohen Schreibaufwand und der Code wird unübersichtlich.
+
+### Beispiel:
+
+```python
+x = 5
+
+if x == 0:
+    ...
+elif x == 1:
+    ...
+elif x == 2:
+    ...
+elif x == 3:
+    ...
+else:
+    ...
+```
+
+Dies lässt sich mit dem `match`-`case`-Statement eleganter formulieren. Die allgemeine Syntax ist:
+
+```python
+match variable:
+    case Muster1:
+        # Aktion für Muster1
+    case Muster2:
+        # Aktion für Muster2
+    case _:
+        # Standardaktion, wenn kein Muster passt
+```
+
+Was passiert hier?
+
+1. match variable:
+   Hierbei wird die zu überprüfende Variable angegeben.
+
+2. case Muster:
+   Ein Fall, der mit der Variable verglichen wird. Wenn das Muster übereinstimmt, wird der zugehörige Codeblock ausgeführt.
+
+3. Wildcard _:
+   Ein Platzhalter, der immer übereinstimmt. Er dient als "default"-Fall, ähnlich wie ein else-Fall.
+
+Nun wollen wir das auf unser Beispiel von oben übertragen, um dieses eleganter zu formulieren.
+
+```python
+x = 5
+
+match x:
+    case 0:
+        ...
+    case 1:
+        ...
+    case 2:
+        ...
+    case 3:
+        ...
+    case _:
+        ...
+```
+
 
 ## `while`-Schleifen
 
@@ -87,7 +150,7 @@ print(f"Du hast die gesuchte Zahl {secret_number} in {count} Versuchen erraten."
 ```
 
 
-## for-Schleifen
+## `for`-Schleifen
 
 Neben while-Schleifen gibt es noch for-Schleifen. Damit kann man unter anderem über eine range an Zahlen iterieren.
 

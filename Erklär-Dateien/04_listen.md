@@ -46,6 +46,22 @@ print(len(digits))
 print(sum(digits))  
 ```
 
+## Indexierung
+
+Listen sind indexiert, was bedeutet, dass man über Indizes auf Werte zugreifen kann. Bei einer Liste mit
+n Elementen beginnt die Indexierung bei 0 und endet bei n-1. Man kann auch negative Indizes verwenden, zum Beispiel
+liefert der Index -1 das letzte Element (auf negative Indizes wird implizit n addiert).
+
+### Beispiel:
+
+```python
+digits = [1, 2, 3, 4, 5]
+
+print(digits[0])
+print(digits[-1])
+
+digits[2] = 42
+```
 
 ## Mit `for`-Schleifen über Listen iterieren
 
