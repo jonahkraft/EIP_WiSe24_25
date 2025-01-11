@@ -150,7 +150,6 @@ Hier ist eine Liste der wichtigsten Escape-Sequenzen in Python:
 | `\uhhhh`       | 16-Bit Unicode-Zeichen                      | `"\u00A9"`               | `©`                                     |
 | `\Uhhhhhhhh`   | 32-Bit Unicode-Zeichen                      | `"\U0001F600"`           | 😀                                      |
 
-Anmerkung: <br> ist ein HTML-Tag, das einen Zeilenumbruch darstellt, da in der Tabelle dafür sonst kein Platz wäre.
 Probier die Escape-Sequenzen selbst aus. Unicode-Zeichen wie Emojis kann man übrigens auch einfach direkt in einen String einfügen, ohne die
 Codierung anzugeben.
 
