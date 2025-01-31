@@ -27,7 +27,7 @@ und die Laufzeit so drastisch zu verringern (das wird bei größeren Eingabewert
 
 ### Aufgabe 2
 Schreiben Sie eine rekursive Funktion, die den Binomialkoeffizienten nCk mit der Formel nCk = (n-1)C(k-1) + (n-1)C(k)
-berechnet. Analog zu Aufgabe 5 sollen Sie sich überlegen, wie man mithilfe von dynamischer Programmierung die Laufzeit verbessern
+berechnet. Analog zu Aufgabe 1 sollen Sie sich überlegen, wie man mithilfe von dynamischer Programmierung die Laufzeit verbessern
 kann und dies implementieren.
 
 [Hier](../Muster/Bonusaufgaben/dynamic_programming.py) finden Sie die Musterlösung.
