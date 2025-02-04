@@ -7,7 +7,7 @@ Empfohlene Skills: [Datentypen und Operatoren](01_datentypen_operationen.md), [K
 
 ## @staticmethod
 
-Ein `@staticmethod` ist eine Methode, die innerhalb einer Klasse definiert ist, aber keinen Zugriff auf die Instanz (`self`) 
+Eine `@staticmethod` ist eine Methode, die innerhalb einer Klasse definiert ist, aber keinen Zugriff auf die Instanz (`self`) 
 oder die Klasse (`cls`) hat. Sie verhält sich wie eine normale Funktion, die in den Namensraum der Klasse eingeschlossen ist.
 
 ### Syntax:
@@ -34,8 +34,8 @@ print(Math.add(5, 3))
 
 ## @classmethod
 
-Ein `@classmethod` ist eine Methode, die Zugriff auf die Klasse (`cls`) hat, aber nicht auf die Instanz (`self`). 
-Es wird häufig verwendet, um Fabrikmethoden zu erstellen oder den Zustand der Klasse zu verändern.
+Eine `@classmethod` ist eine Methode, die Zugriff auf die Klasse (`cls`) hat, aber nicht auf die Instanz (`self`). 
+Sie kann beispielsweise verwendet werden, um auf Klassenattribute zuzugreifen oder diese zu verändern.
 
 ### Syntax:
 
@@ -65,11 +65,13 @@ class Circle:
 
 Eine abstrakte Klasse ist eine Klasse, die nicht instanziiert werden kann und dazu dient, eine Basis für andere Klassen 
 zu schaffen. Abstrakte Klassen enthalten oft abstrakte Methoden, die in den abgeleiteten Klassen implementiert werden müssen.
+Sie dienen dazu, sicherzustellen, dass bestimmte Funktionalitäten in den Unterklassen vorhanden sind.
 
 ## @abstractmethod
 
-Ein `@abstractmethod` ist eine Methode, die in einer abstrakten Klasse definiert ist und keine Implementierung hat. 
-Abgeleitete Klassen müssen diese Methode implementieren, um instanziiert werden zu können.
+Eine `@abstractmethod` ist eine Methode, die in einer abstrakten Klasse definiert ist und keine Implementierung hat. 
+Abgeleitete Klassen müssen diese Methode implementieren, um instanziiert werden zu können. Wie eben bereits erwähnt, wird
+dadurch sichergestellt, dass alle benötigten Methoden existieren, beispielsweise `__lt__`, um die Objekte sortieren zu können.
 
 ### Syntax:
 
