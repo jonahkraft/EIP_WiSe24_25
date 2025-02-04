@@ -16,7 +16,6 @@ oder die Klasse (`cls`) hat. Sie verhält sich wie eine normale Funktion, die in
 class MyClass:
     @staticmethod
     def my_method(parameter):
-        # Code hier
         ...
 ```
 
@@ -43,7 +42,6 @@ Sie kann beispielsweise verwendet werden, um auf Klassenattribute zuzugreifen od
 class MyClass:
     @classmethod
     def my_method(cls, parameter):
-        # Code hier
         ...
 ```
 
