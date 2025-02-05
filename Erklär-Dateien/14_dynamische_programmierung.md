@@ -6,8 +6,10 @@ Empfohlene Skills: [Datentypen und Operatoren](01_datentypen_operationen.md), [K
 ---
 
 Die Idee der dynamischen Programmierung ist es, Zwischenergebnisse zu speichern und redundante Rechnungen zu sparen.
-Kurz gesagt wird ein Memory angelegt, also ein Dictionary, das als Keys jeweils n und als Values den Funktionswert von n
-speichert.
+Kurz gesagt wird ein Memory angelegt, also beispielsweise ein Dictionary, das als Keys jeweils n und als Values den Funktionswert von n
+speichert. Neben Dictionaries sind auch Listen und Matrizen gängig. Durch das Speichern von Zwischenergebnissen müssen
+wir dann in den Rekursionsaufrufen lediglich fragen, ob wir den Wert bereits berechnet haben, um die Laufzeit erheblich zu
+beschleunigen.
 
 
 ## Beispiel: Fibonacci
@@ -21,8 +23,13 @@ def fibonacci(n):
         return fibonacci(n-1) + fibonacci(n-2)
 ```
 
-Die Fibonacci-Funktion ist recht ineffizient, da der Rechenaufwand mit steigendem n explodiert.
-Beheben wir das!
+Die obige Implementierung der Fibonacci-Funktion sollte Ihnen bekannt sein. Ein Nachteil, der bei steigenden Werten für
+n schnell auffällt, ist die Tatsache, dass die Laufzeit sehr schnell wächst. Konkret lässt sie sich durch 2^n abschätzen.
+Wir wollen den Algorithmus jetzt so verbessern, dass er eine Laufzeit hat, die nur linear in n ist (und damit deutlich schneller).
+Wie oben bereits angedeutet, erstellen wir ein Memory, in unserem Fall als ein Dictionary. Am Anfang fragen wir, ob wir
+den Wert bereits berechnet haben. Wenn ja, geben wir ihn direkt zurück und können uns weitere Rekursionsaufrufe sparen.
+Alle anderen Ergebnisse, die wir berechnen müssen, speichern wir im Memory. Dadurch wir für ein gegebenes n für alle i aus 0...n-1
+fibonacci(i) nur exakt einmal rekursiv berechnet.
 
 ```python
 def dynamic_fibonacci(n, mem={}):
@@ -38,10 +45,6 @@ def dynamic_fibonacci(n, mem={}):
         
     return mem[n]
 ```
-
-Wenn Funktionswerte bereits bekannt sind, werden sie aus dem Memory gelesen. Ansonsten werden sie berechnet und dann
-ins Memory geschrieben. Da Dictionaries mutable sind, greift jeder Rekursionsaufruf auf dasselbe Dictionary zu und es muss
-nicht returned werden!
 
 
 ## Ein weiterer Anwendungsfall

@@ -20,9 +20,11 @@ Elternklasse erweitern oder überschreiben.
 
 ```python
 class Elternklasse:
+    ...
     # Methoden und Attribute der Elternklasse
 
 class Kindklasse(Elternklasse):
+    ...
     # Methoden und Attribute der Kindklasse
 ```
 

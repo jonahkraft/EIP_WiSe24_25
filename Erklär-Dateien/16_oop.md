@@ -18,16 +18,18 @@ komplexe Software zu entwickeln. Dieser Abschnitt führt in die Grundlagen der O
 - **Klassen** sind Blaupausen oder Vorlagen für Objekte.
 - **Objekte** sind Instanzen von Klassen. Sie repräsentieren konkrete Dinge oder Konzepte.
 
-Eine Klasse enthält **Attribute** (Variablen) und **Methoden** (Funktionen), die das Verhalten des Objekts beschreiben.
+Beispielweise werden Strings in Python durch die Klasse `str` repräsentiert und wenn man eine Variable vom Typ `str` 
+verwendet, so ist diese eine Instanz der Klasse `str`.
+
+Eine Klasse enthält **Attribute** (analog zu Variablen) und **Methoden** (analog zu Funktionen), die das Verhalten des Objekts beschreiben.
 
 ### Syntax für Klassen und Objekte:
 
 ```python
 class Car:
-    # Konstruktor: Initialisiert Attribute beim Erstellen des Objekts
     def __init__(self, brand, color):
-        self.brand = brand  # Attribut 'brand'
-        self.color = color  # Attribut 'color'
+        self.brand = brand 
+        self.color = color 
 
     def description(self):
         return f"Marke: {self.brand}, Farbe: {self.color}"
@@ -37,7 +39,8 @@ print(my_car.description())
 ```
 
 Der Konstruktor ist eine spezielle Methode, die beim Erstellen eines Objekts automatisch aufgerufen wird. In Python heißt 
-der Konstruktor `__init__`. Er wird verwendet, um die Attribute eines Objekts zu initialisieren.
+der Konstruktor `__init__`. Er wird verwendet, um die Attribute eines Objekts zu initialisieren. In der Regel werden im Konstruktor
+die Attribute der Klasse (hier brand und color) deklariert. 
 
 
 ## Die Rolle von `self` in Python-Klassen
@@ -50,14 +53,15 @@ Was ist `self`?
 
 - `self` ist der erste Parameter jeder Instanzmethode einer Klasse.
 - Es verweist immer auf das Objekt, das die Methode aufruft.
-- Durch `self` können Methoden auf die Instanzvariablen (auch Attribute genannt) und andere Methoden der Klasse zugreifen.
 
 
 ## Magische Methoden (Dunder-Methods)
 
 **Magische Methoden** (auch **Dunder-Methods** genannt, wegen der doppelten Unterstriche) sind spezielle Methoden, 
 die von Python vordefiniert sind. Sie erlauben es, das Verhalten von Objekten in bestimmten Situationen zu steuern, 
-z. B. wie Objekte verglichen, dargestellt oder addiert werden.
+z. B. wie Objekte verglichen, dargestellt oder addiert werden. Dadurch kann man dann etwa die Operation `+` für die Klasse
+verwenden. `__lt__` ermöglicht es, Objekte der Klasse mit `<` zu vergleichen und Listen, die diese Objekte enthalten, zu
+sortieren.
 
 ### Wichtige magische Methoden:
 
@@ -71,13 +75,13 @@ z. B. wie Objekte verglichen, dargestellt oder addiert werden.
 ### Beispiel für magische Methoden:
 
 ```python
-class Point:
+class Vector:
     def __init__(self, x, y):
         self.x = x
         self.y = y
 
     def __str__(self):
-        return f"Point({self.x}, {self.y})"
+        return f"Vector({self.x}, {self.y})"
 
     def __repr__(self):
         return str(self)
@@ -86,22 +90,23 @@ class Point:
         return self.x == other_point.x and self.y == other_point.y
 
     def __add__(self, other_point):
-        return Point(self.x + other_point.x, self.y + other_point.y)
+        return Vector(self.x + other_point.x, self.y + other_point.y)
 
-p1 = Point(1, 2)
-p2 = Point(1, 2)
-p3 = Point(3, 4)
+
+v1 = Vector(1, 2)
+v2 = Vector(1, 2)
+v3 = Vector(3, 4)
 
 # __str__
-print(p1)
+print(v1)
 
 # __eq__ für Gleichheit
-print(p1 == p2)  
-print(p1 == p3)  
+print(v1 == v2)
+print(v1 == v3)
 
 # __add__ für Addition
-p4 = p1 + p3
-print(p4)  
+v4 = v1 + v3
+print(v4)  
 ```
 
 
@@ -132,20 +137,16 @@ class Person:
         self.name = name
         self.age = age
 
-    # Getter für 'name'
     def get_name(self):
         return self.name
 
-    # Setter für 'name'
     def set_name(self, value):
         self.name = value
 
-    # Getter für 'alter'
-    def get_alter(self):
+    def get_age(self):
         return self.age
 
-    # Setter für 'alter'
-    def set_alter(self, value):
+    def set_age(self, value):
         self.age = value
 
 p = Person("Lena", 25)
@@ -177,7 +178,9 @@ print(my_account.balance)
 ```
 
 In diesem Beispiel wird das Objekt `my_account` per Referenz übergeben, und Änderungen am Kontostand innerhalb der 
-Funktion `desposit_money()` sind auch außerhalb der Funktion sichtbar.
+Funktion `desposit_money()` sind auch außerhalb der Funktion sichtbar. Dies sollte man sich im Hinterkopf behalten, weil
+es sonst zu unerwartetem Verhalten führen kann. Man kann die Methode `__copy__` überladen und Kopien von Objekten übergeben,
+wenn die Originale nicht verändert werden sollen.
 
 ---
 
