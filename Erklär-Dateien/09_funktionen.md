@@ -4,14 +4,16 @@ Empfohlene Skills: [Datentypen und Operatoren](01_datentypen_operationen.md), [K
 
 ---
 
-Funktionen sind in Python ein zentrales Konzept, um Code in wiederverwendbare Blöcke zu organisieren. 
-Eine Funktion kann Parameter annehmen, eine Aufgabe ausführen und einen Wert zurückgeben.
+Funktionen sind in Python ein zentrales Konzept, um Code in wiederverwendbaren Blöcken zu organisieren. 
+Eine Funktion kann Parameter annehmen, eine Aufgabe ausführen und einen Wert zurückgeben. Man kann sie sich wie eine
+Fabrik vorstellen. Man gibt Ressourcen herein und bekommt ein Endprodukt.
 
 
 ## `return`
 
 Das Schlüsselwort `return` wird verwendet, um das Ergebnis einer Funktion zurückzugeben. 
-Wenn eine Funktion kein `return`-Statement enthält, gibt sie automatisch `None` zurück.
+Wenn eine Funktion kein `return`-Statement enthält, gibt sie automatisch `None` zurück. Dabei handelt es sich um
+einen besonderen Datentyp, der das Fehlen eines Wertes darstellt.
 
 ### Syntax:
 
@@ -36,8 +38,8 @@ das Ergebnis mit `return` zurück.
 
 Mit `return` kann man ein Objekt zurückgeben. Daher stellt sich die Frage, wie man vorgehen kann, wenn man mehrere Objekte
 wie etwa einen int und einen bool zurückgeben möchte. Dies lässt sich realisieren, indem man alle Werte, die zurückgegeben
-werden sollen, in ein Tupel packt. Tupel sind kurz gesagt unveränderliche Listen. [Hier](13_tupel_dictionaries_sets.md) kannst
-du mehr darüber erfahren.
+werden sollen, in ein Tupel packt. Tupel sind vereinfacht gesagt unveränderliche Listen. [Hier](13_tupel_dictionaries_sets.md) können
+Sie mehr darüber erfahren.
 
 ### Beispiel
 
@@ -62,6 +64,7 @@ Funktionen können eine beliebige Anzahl von Parametern haben. Diese Parameter w
 
 ```python
 def function_name(param1, param2, ...):
+    ...
     # Code der Funktion
 ```
 
@@ -75,7 +78,8 @@ result = multiply(2, 3, 4)
 print(result)  
 ```
 
-In diesem Beispiel nimmt die Funktion `multipliziere` drei Parameter (`a`, `b`, `c`) und multipliziert sie miteinander.
+In diesem Beispiel nimmt die Funktion `multiply` drei Parameter (`a`, `b`, `c`) und multipliziert sie miteinander. Das
+Ergebnis wird anschließend zurückgegeben.
 
 
 ## Call by Reference
@@ -83,6 +87,10 @@ In diesem Beispiel nimmt die Funktion `multipliziere` drei Parameter (`a`, `b`, 
 Python verwendet für veränderbare (mutable) Objekte eine **Call by Reference**-Semantik, was bedeutet, dass 
 Änderungen an Objekten innerhalb einer Funktion auch außerhalb der Funktion sichtbar sind. 
 Für unveränderbare (immutable) Objekte wird **Call by Value**-ähnlich gearbeitet.
+
+Zur Erinnerung:  
+`int`, `float`, `str`, `bool` sind unveränderlich (auch die eben kurz erwähnten Tupel).  
+Listen sind veränderlich.
 
 ### Beispiel (mit einer Liste, einem veränderbaren Datentyp):
 
@@ -120,17 +128,19 @@ wird der Standardwert verwendet.
 
 ```python
 def function_name(param1=standardwert):
+    ...
     # Code der Funktion
 ```
 
 ### Beispiel:
 
 ```python
-def greeeting(name="Welt"):
+def greeting(name="Welt"):
     print(f"Hallo, {name}!")
 
-greeeting("Rick Astley")  
-greeeting()         
+
+greeting("Rick Astley")
+greeting()         
 ```
 
 In diesem Beispiel hat der Parameter `name` einen Standardwert `"Welt"`. Wenn kein Argument übergeben wird, 
@@ -141,7 +151,8 @@ wird dieser Standardwert verwendet.
 
 Lambda-Funktionen sind anonyme, kleine Funktionen, die mit dem Schlüsselwort `lambda` definiert werden. 
 Sie sind nützlich für kurze, einmalige Operationen. Funktionen können auch Funktionen als Parameter übergeben bekommen.
-Hier sind lambda-Funktionen sinnvoll.
+Hier sind lambda-Funktionen sinnvoll. Sie können aber die Lesbarkeit des Codes einschränken, weshalb man sie nicht 
+inflationär verwenden sollte.
 
 ### Syntax
 
@@ -166,7 +177,8 @@ even_digits = list(filter(lambda x: x % 2 == 0, digits))
 print(even_digits)  
 ```
 
-Wenn dir filter() noch nicht bekannt ist, findest du eine Erklärung in der [Datei zu nützlichen Funktionen](10_nuetzliche_funktionen.md).
+In diesem Beispiel wird die Lambda-Funktion verwendet, um nur die geraden Zahlen aus der Liste `digits` zu filtern.
+Wenn Ihnen filter() noch nicht bekannt ist, finden Sie eine Erklärung in der [Datei zu nützlichen Funktionen](10_nuetzliche_funktionen.md).
 
 
 ## `*args`
@@ -209,7 +221,9 @@ def example_kwargs(**kwargs):
 example_kwargs(a=1, b=2, c=3)
 ```
 
-Die Funktion nimmt beliebig viele **benannte** Argumente und gibt sie als Dictionary aus.
+In diesem Beispiel wird die Funktion `example_kwargs` mit drei benannten Argumenten aufgerufen. Das Dictionary `kwargs`
+enthält die Schlüssel-Wert-Paare `{'a': 1, 'b': 2, 'c': 3}`.
+
 
 ### Beispiel mit Zugriff auf Schlüssel und Werte:
 

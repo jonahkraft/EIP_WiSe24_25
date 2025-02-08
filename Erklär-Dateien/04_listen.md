@@ -8,7 +8,9 @@ Empfohlene Skills: [Datentypen und Operatoren](01_datentypen_operationen.md) und
 
 Listen sind eine der grundlegenden Datentypen in Python. Sie sind geordnete Sammlungen von Elementen, die verschiedene
 Datentypen enthalten können (wie Zahlen, Strings oder sogar andere Listen). Listen sind veränderbar (mutable), was
-bedeutet, dass du ihre Inhalte nach der Erstellung ändern kannst.
+bedeutet, dass Sie ihre Inhalte nach der Erstellung ändern können.
+
+Für Fortgeschrittene: Standardmäßig bietet Python nur dynamischen Listen und keine Arrays wie andere Programmiersprachen.
 
 ### Erstellen einer Liste:
 
@@ -16,10 +18,12 @@ bedeutet, dass du ihre Inhalte nach der Erstellung ändern kannst.
 my_list = [1, 2, 3, "vier", 5.0]
 ```
 
+Es ist möglich, Elemente von verschiedenen Datentypen in einer Liste zu haben. Dies ist jedoch nicht empfehlenswert, da
+es die Lesbarkeit des Codes beeinträchtigen und zu unerwartetem Verhalten führen kann.
 
 ## Operationen mit Listen
 
-Hier sind einige grundlegende Operationen, die du mit Listen durchführen kannst:
+Hier sind einige grundlegende Operationen, die Sie mit Listen durchführen können:
 
 | Operation   | Beschreibung                                               | Beispiel                        |
 |-------------|------------------------------------------------------------|---------------------------------|
@@ -65,8 +69,8 @@ digits[2] = 42
 
 ## Mit `for`-Schleifen über Listen iterieren
 
-Du kannst `for`-Schleifen verwenden, um über die Elemente einer Liste zu iterieren. Anstatt der range()-Funktion kannst
-du auch eine Liste angeben, über deren Elemente die Schleife iterieren soll.
+Sie können `for`-Schleifen verwenden, um über die Elemente einer Liste zu iterieren. Anstatt der range()-Funktion ist es
+möglich, eine Liste anzugeben, über deren Elemente die Schleife iterieren soll.
 
 ### Beispiel:
 
@@ -77,8 +81,9 @@ for color in colors:
     print(f"Die Farbe ist: {color}")
 ```
 
-Was ist aber, wenn ich den Index und das Element an diesem Index brauche?
-Die Funktion enumerate löst dieses Problem. Sie lässt sich folgendermaßen benutzen:
+Was ist aber, wenn der Index und das Element an diesem Index benötigt werden?
+Natürlich könnte man das mit einer range()-Funktion und dem Zugriff auf die Liste über den Index machen, aber es gibt
+die Möglichkeit, das eleganter zu lösen. Die Funktion `enumerate()` löst dieses Problem:
 
 ```python
 colors = ["red", "green", "blue"]
@@ -95,7 +100,6 @@ colors = ["red", "green", "blue"]
 for index, element in enumerate(colors, start=1):
     print(f"{index}. Farbe: {element}")
 ```
-
 
 ## Unterschied zwischen mutablen und nicht-mutablen Datentypen
 
@@ -147,7 +151,7 @@ print(original_list)
 
 ## Slicing
 
-Slicing ermöglicht es dir, Teile einer Liste auszuwählen, indem du einen bestimmten Bereich von Indizes angibst.
+Slicing ermöglicht es Ihnen, Teile einer Liste auszuwählen, indem Sie einen bestimmten Bereich von Indizes angeben.
 
 ### Syntax:
 
@@ -158,20 +162,20 @@ liste[start:stop:step]
 ### Beispiel:
 
 ```python
-zahlen = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 # Zugriff auf die Elemente von Index 2 bis 5 (5 ist ausgeschlossen)
-short_list = zahlen[2:5] 
+short_list = digits[2:5]
 
 # Zugriff auf alle Elemente mit Schrittweite 2
-half_list = zahlen[::2]  
+half_list = digits[::2]
 
 # Zugriff auf die letzten 3 Elemente
-last_elements = zahlen[-3:] 
+last_elements = digits[-3:] 
 ```
 
 ---
 
 [vorherige Seite](03_math_random_string_module.md)  
 [Zurück zum Inhaltsverzeichnis](00_inhaltsverzeichnis.md)  
-[nächste Seite](05_2d_listen.md)
+[nächste Seite](05_matrizen_2d_listen)

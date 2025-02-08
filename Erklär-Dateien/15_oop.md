@@ -184,6 +184,6 @@ wenn die Originale nicht verändert werden sollen.
 
 ---
 
-[vorherige Seite](15_breitensuche.md)  
+[vorherige Seite](14_dynamische_programmierung.md)  
 [Zurück zum Inhaltsverzeichnis](00_inhaltsverzeichnis.md)  
-[nächste Seite](17_vererbung.md)
+[nächste Seite](16_vererbung)

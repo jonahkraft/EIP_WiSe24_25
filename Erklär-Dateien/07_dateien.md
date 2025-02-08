@@ -51,6 +51,7 @@ automatisch nach der Operation, auch wenn ein Fehler auftritt.
 
 ```python
 with open("dateiname.txt", "modus") as file:
+    ...
     # Operationen mit der Datei
 ```
 
@@ -95,7 +96,7 @@ with open("beispiel.txt", "r") as file:
 
 ## Iterieren über eine Datei
 
-Du kannst auch über die Datei iterieren, um Zeile für Zeile zu lesen:
+Sie können auch über die Datei iterieren, um Zeile für Zeile einzulesen:
 
 ```python
 with open("beispiel.txt", "r") as file:
@@ -106,7 +107,7 @@ with open("beispiel.txt", "r") as file:
 
 ## Schreiben in eine Datei
 
-Zum Schreiben in eine Datei kannst du den Schreibmodus (`'w'`) oder den Anfügemodus (`'a'`) verwenden. Wenn die Datei
+Zum Schreiben in eine Datei verwendet man den Schreibmodus (`'w'`) oder den Anfügemodus (`'a'`). Wenn die Datei
 bereits existiert, überschreibt der Schreibmodus den Inhalt.
 
 ### Beispiel: Schreiben in eine Datei
@@ -126,8 +127,11 @@ with open("output.txt", "a") as file:
 
 ## Datei schließen
 
-Wenn du `open()` ohne `with` verwendest, musst du die Datei manuell schließen, um sicherzustellen, dass alle Ressourcen
-freigegeben werden.
+Wenn Sie `open()` ohne `with` verwenden, müssen Sie die Datei manuell schließen, um sicherzustellen, dass alle Ressourcen
+freigegeben werden.  
+Das Arbeiten mit Dateien auf diese Weise (also ohne `with`) wird nicht empfohlen. Die Datei kann in diesem Fall nur
+ordnungsgemäß geschlossen werden, wenn `file.close()` ausgeführt wird. Wenn das Programm vorher abstürzt, wird die Datei
+ggf. nicht ordnungsgemäß geschlossen werden und beschädigt werden.
 
 ### Beispiel:
 

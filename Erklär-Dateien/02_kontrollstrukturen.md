@@ -6,21 +6,24 @@ Empfohlene Skills: [Datentypen und Operatoren](01_datentypen_operationen.md)
 
 ## `if`-Statements
 
-`if`-Anweisungen ermöglichen es dir, Bedingungen zu überprüfen und entsprechend zu reagieren. Dadurch kann dein Programm
+`if`-Anweisungen ermöglichen es Ihnen, Bedingungen zu überprüfen und entsprechend zu reagieren. Dadurch kann Ihr Programm
 auf verschiedene Ereignisse reagieren. Die allgemeine Syntax ist:
 
 ```python
 if bedingung:
+   ...
     # Codeblock, der ausgeführt wird, wenn die Bedingung wahr ist
 elif andere_bedingung:
+   ...
     # Codeblock, der ausgeführt wird, wenn die andere Bedingung wahr ist
 else:
+   ...
     # Codeblock, der ausgeführt wird, wenn keine der Bedingungen wahr ist
 ```
 
 Was passiert hier?  
-Zuerst wird geprüft, ob der boolesche Wert `bedingung` zu True evaluiert. Wenn das der Fall ist, wird der Code darunter
-ausgeführt. Code aus `elif` oder `else` wird ignoriert. Wenn `bedingung` aber zu False evaluiert, werden nacheinander alle
+Zuerst wird geprüft, ob der boolesche Wert `bedingung` wahr ist. Wenn das der Fall ist, wird der Code darunter
+ausgeführt. Code aus `elif` oder `else` wird ignoriert. Wenn `bedingung` aber falsch ist, werden nacheinander alle
 `elif`-Blöcke analog getestet. Wenn keine Bedingung True ist, wird der `else`-Block (falls vorhanden) ausgeführt.
 Es ist möglich, beliebig viele elif-Statements zu verwenden. `elif` und `else` sind optional.
 
@@ -107,10 +110,11 @@ match x:
 
 ```python
 while bedingung:
+   ...
     # Codeblock, der ausgeführt wird, solange die Bedingung wahr ist
 ```
 
-Konkret wird erst die Bedingung wie bei einem if-Statement getestet. Wenn sie zu True evaluiert, wird der Codeblock
+Konkret wird erst die Bedingung wie bei einem if-Statement getestet. Wenn sie wahr ist, wird der Codeblock
 ausgeführt. Dann wird die Bedingung wieder getestet und so weiter.  
 Achtung: Dadurch können "infinite loops" entstehen, wenn die Bedingung immer wahr ist.
 
@@ -145,9 +149,11 @@ while not guessed:  # solange guessed False ist...
     else:
         print("Die gesuchte Zahl ist kleiner!")
 
-print(f"Du hast die gesuchte Zahl {secret_number} in {count} Versuchen erraten.")
-
+print(f"Sie haben die gesuchte Zahl {secret_number} in {count} Versuchen erraten.")
 ```
+
+Bemerkung: Die beste Taktik des Spielers ist es, die Mitte des Intervalls zu raten. So wird das Intervall bei jedem
+Schritt halbiert. Das ist der schnellste Weg, um die Zahl zu erraten. Diesen Algorithmus nennt man "binary search".
 
 
 ## `for`-Schleifen
@@ -191,8 +197,7 @@ will.
 range(10) gibt alle Zahlen zwischen 0 und 9 zurück. In der ersten Iteration hat i dann den Wert 0, in der
 zweiten 1 und so weiter. Die 10 ist exklusiv, wird also nicht mehr mitgezählt. Im Schleifenkörper kann man die
 Laufvariable wie eine normale Variable verwenden; man kann z.B. mathematische Operationen damit ausführen.  
-Man sollte
-nur davon absehen, den Wert der Laufvariable zu verändern, da dies zu unerwartetem Verhalten führen kann!
+Man sollte nur davon absehen, den Wert der Laufvariable zu verändern, da dies zu unerwartetem Verhalten führen kann!
 
 ---
 
@@ -243,8 +248,6 @@ for i in range(5):
 2
 ```
 
-Im obigen Beispiel wird die Schleife beendet, sobald `i` den Wert 3 erreicht. Daher werden nur die Werte 0, 1 und 2 ausgegeben.
-
 ### `continue`
 
 Die `continue`-Anweisung überspringt den aktuellen Iterationsschritt einer Schleife und fährt mit der nächsten Iteration fort. 
@@ -274,7 +277,7 @@ In diesem Beispiel wird der Wert 2 übersprungen, und die Schleife gibt nur die 
 ### `pass`
 
 Die `pass`-Anweisung ist ein Platzhalter, der nichts tut. Sie wird verwendet, wenn syntaktisch ein Codeblock 
-erforderlich ist, aber du noch keinen Code schreiben möchtest oder wenn ein Block absichtlich leer bleiben soll. 
+erforderlich ist, Sie aber noch keinen Code schreiben möchten oder wenn ein Block absichtlich leer bleiben soll. 
 `pass` kann bei jeder Art von Codeblock verwendet werden, z.B. auch in if-Statements.
 
 ### Beispiel:

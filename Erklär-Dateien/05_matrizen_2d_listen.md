@@ -1,4 +1,4 @@
-# Zweidimensionale Listen
+# Matrizen und Listen von Listen
 
 Empfohlene Skills: [Datentypen und Operatoren](01_datentypen_operationen.md), [Kontrollstrukturen](02_kontrollstrukturen.md), [Listen](04_listen.md) und 
 Grundkenntnisse in [List Comprehension](06_list_comprehension.md)
@@ -24,7 +24,7 @@ matrix = [
 ]
 ```
 
-In diesem Beispiel besteht die `matrix` aus 3 Zeilen und 3 Spalten, wobei jede innere Liste eine Zeile darstellt.
+In diesem Beispiel besteht `matrix` aus 3 Zeilen und 3 Spalten, wobei jede innere Liste eine Zeile darstellt.
 
 
 ## Zugriff auf Elemente in zweidimensionalen Listen
@@ -38,7 +38,7 @@ print(matrix[0][1])  # Zugriff auf die erste Zeile, zweite Spalte
 print(matrix[2][2])  # Zugriff auf die dritte Zeile, dritte Spalte 
 ```
 
-Du kannst auch negative Indizes verwenden, um von hinten auf die Listen zuzugreifen.
+Sie können auch negative Indizes verwenden, um von hinten auf die Listen zuzugreifen.
 
 ```python
 print(matrix[-1][-1])  # Zugriff auf das letzte Element 
@@ -48,7 +48,7 @@ print(matrix[-2][-3])  # Zugriff auf das Element in der zweiten letzten Zeile un
 
 ## Iteration über zweidimensionale Listen
 
-Du kannst mit verschachtelten `for`-Schleifen über zweidimensionale Listen iterieren, um jedes Element zu erreichen.
+Es ist möglich, mit verschachtelten `for`-Schleifen über zweidimensionale Listen iterieren, um jedes Element zu erreichen.
 
 ### Beispiel:
 
@@ -70,7 +70,7 @@ for row in matrix:
 
 ## Modifizieren von Elementen in einer zweidimensionalen Liste
 
-Du kannst die Elemente einer zweidimensionalen Liste ändern, indem du sie über ihren Index ansprichst.
+Sie können die Elemente einer zweidimensionalen Liste ändern, indem Sie sie über ihren Index ansprechen.
 
 ### Beispiel:
 
@@ -82,7 +82,7 @@ print(matrix)
 
 ## Slicing in zweidimensionalen Listen
 
-Du kannst Slicing auch auf zweidimensionale Listen anwenden, um Teile der Daten auszuwählen.
+Analog zu eindimensionalen Listen können Sie auch Slicing in zweidimensionalen Listen verwenden, um Teile der Liste zu extrahieren.
 
 ### Beispiel:
 

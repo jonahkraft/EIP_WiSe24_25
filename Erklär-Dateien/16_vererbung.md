@@ -1,7 +1,7 @@
 # Vererbung
 
 Empfohlene Skills: [Datentypen und Operatoren](01_datentypen_operationen.md), [Kontrollstrukturen](02_kontrollstrukturen.md),
-[Funktionen](09_funktionen.md) und [OOP](16_oop.md)
+[Funktionen](09_funktionen.md) und [OOP](15_oop)
 
 ---
 
@@ -35,7 +35,6 @@ class Kindklasse(Elternklasse):
 ## Einfaches Beispiel:
 
 ```python
-# Parent class
 class Animal:
     def __init__(self, name):
         self.name = name
@@ -43,14 +42,15 @@ class Animal:
     def move(self):
         print(f"{self.name} is moving.")
 
-# Child class
+
 class Dog(Animal):
     def bark(self):
         print(f"{self.name} says: Woof!")
 
-dog1 = Dog("Rex")
-dog1.move()   
-dog1.bark()   
+
+dog = Dog("Rex")
+dog.move()
+dog.bark()   
 ```
 
 ### Erklärung:
@@ -61,9 +61,9 @@ dog1.bark()
 ## Der `super()`-Befehl
 
 Der `super()`-Befehl ermöglicht es, auf Methoden der Elternklasse aus der Kindklasse zuzugreifen. Dies ist besonders nützlich, 
-wenn du in der Kindklasse eine Methode überschreibst und dennoch auf die Funktionalität der Elternklasse zugreifen möchtest.
-Im obigen Beispiel wurde der Konstruktor der Hund-Klasse weggelassen. An sich ist er redundant, da dasselbe passieren soll
-wie im Konstruktor von Tier, aber ist eine gute Praxis, ihn hinzuschreiben.
+wenn Sie in der Kindklasse eine Methode überschreiben und dennoch auf die Funktionalität der Elternklasse zugreifen möchten.
+Im obigen Beispiel wurde der Konstruktor der Hund-Klasse weggelassen, da er identisch mit dem der Elternklasse ist. Daher
+ist es ausreichend, den Konstruktor der Elternklasse aufzurufen, wenn ein Dog-Objekt erstellt wird.
 
 ### Beispiel mit `super()`:
 
@@ -75,22 +75,19 @@ class Animal:
     def move(self):
         print(f"{self.name} is moving.")
 
+
 class Dog(Animal):
     def __init__(self, name, breed):
-        # Initialize the parent class
         super().__init__(name)
         self.breed = breed
 
     def move(self):
-        # Access the parent class method
         super().move()
         print(f"{self.name} is running fast.")
 
-dog1 = Dog("Rex", "German Shepherd")
-dog1.move()
-# Output:
-# Rex is moving.
-# Rex is running fast.
+
+dog = Dog("Rex", "German Shepherd")
+dog.move()
 ```
 
 ### Erklärung:
@@ -111,15 +108,17 @@ class Animal:
     def move(self):
         print("Das Tier bewegt sich.")
 
+
 class Bird(Animal):
     def move(self):
         print("Der Vogel fliegt.")
 
-animal1 = Animal()
-bird1 = Bird()
 
-animal1.move()   
-bird1.move()  
+animal = Animal()
+bird = Bird()
+
+animal.move()
+bird.move()  
 ```
 
 ### Erklärung:
@@ -129,7 +128,7 @@ bird1.move()
 
 ## Die `isinstance()`-Funktion
 
-Mit der Funktion `isinstance()` kannst du überprüfen, ob ein Objekt von einer bestimmten Klasse (oder einer abgeleiteten Klasse) ist.
+Mit der Funktion `isinstance()` kann man überprüfen, ob ein Objekt von einer bestimmten Klasse (oder einer abgeleiteten Klasse) ist.
 
 ### Beispiel:
 
@@ -137,14 +136,16 @@ Mit der Funktion `isinstance()` kannst du überprüfen, ob ein Objekt von einer 
 class Animal:
     pass
 
+
 class Dog(Animal):
     pass
 
-dog1 = Dog()
 
-print(isinstance(dog1, Dog))  
-print(isinstance(dog1, Animal)) 
-print(isinstance(dog1, object))  # True, da alle Klassen von object abstammen
+dog = Dog()
+
+print(isinstance(dog, Dog))
+print(isinstance(dog, Animal))
+print(isinstance(dog, object))  # True, da alle Klassen von object abstammen
 ```
 
 ### Erklärung:
@@ -172,6 +173,6 @@ print(issubclass(Animal, Dog))
 
 ---
 
-[vorherige Seite](16_oop.md)  
+[vorherige Seite](15_oop)  
 [Zurück zum Inhaltsverzeichnis](00_inhaltsverzeichnis.md)  
-[nächste Seite](18_fortgeschrittene_oop.md)
+[nächste Seite](17_fortgeschrittene_oop)

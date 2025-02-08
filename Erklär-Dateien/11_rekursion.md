@@ -6,17 +6,19 @@ und [Funktionen](09_funktionen.md)
 ---
 
 Rekursion ist eine Technik, bei der eine Funktion sich selbst aufruft, um ein Problem zu lösen. 
-Ein rekursiver Ansatz zerlegt ein Problem in kleinere Unterprobleme, bis eine bestimmte Bedingung erreicht ist (
-die sogenannte **Basisbedingung**). Diese Methode eignet sich besonders für Probleme, die sich wiederholende Muster oder 
-hierarchische Strukturen haben.
+Ein rekursiver Ansatz zerlegt ein Problem in kleinere Unterprobleme, bis eine bestimmte Bedingung erreicht ist (der sogenannte **Basisfall**). 
+Diese Methode eignet sich besonders für Probleme, die sich wiederholende Muster oder hierarchische Strukturen haben.
 
 
 ## Aufbau einer rekursiven Funktion
 
 Eine rekursive Funktion besteht immer aus zwei Hauptbestandteilen:
 
-- **Basisfall (Abbruchbedingung)**: Die Rekursion muss irgendwann enden. Hier wird eine Bedingung definiert, bei der die Rekursion aufhört.
-- **Rekursiver Fall**: In diesem Teil ruft sich die Funktion selbst auf, um das Problem in kleinere Teile zu zerlegen.
+- **Basisfall (auch Abbruchbedingung oder Rekursionsanker)**:  
+Die Rekursion muss irgendwann enden. Hier wird eine Bedingung definiert, bei der die Rekursion aufhört.
+
+- **Rekursiver Fall**:  
+In diesem Teil ruft sich die Funktion selbst auf, um das Problem in kleinere Teile zu zerlegen.
 
 ### Syntax:
 
@@ -25,6 +27,7 @@ def rekursive_funktion(parameter):
     if basisfall:
         return ergebnis
     else:
+        ...
         # Ruft die Funktion erneut auf (rekursiver Fall)
         return rekursive_funktion(veränderte_parameter)
 ```
@@ -36,6 +39,8 @@ Die Fakultät einer Zahl `n` (geschrieben `n!`) ist das Produkt aller positiven 
 
 - **Basisfall**: Wenn `n == 0`, dann ist `n! = 1`.
 - **Rekursiver Fall**: Wenn `n > 0`, dann ist `n! = n * (n-1)!`.
+
+Negative Zahlen haben keine Fakultät, weshalb wir sie hier nicht betrachten.
 
 ### Beispiel:
 
@@ -82,20 +87,6 @@ Die Berechnung erfolgt rekursiv:
 - `fibonacci(6)` → `fibonacci(5)` + `fibonacci(4)`
 - `fibonacci(5)` → `fibonacci(4)` + `fibonacci(3)`
 - usw.
-
-
-## Vorteile und Nachteile der Rekursion
-
-### Vorteile:
-
-- **Klarheit und Einfachheit**: Rekursive Lösungen sind oft kompakt und elegant, besonders bei Problemen, die sich natürlich rekursiv definieren lassen (wie die Fibonacci-Zahlen oder Baumstrukturen).
-
-### Nachteile:
-
-- **Leistung**: Rekursive Funktionen können speicherintensiv sein, da jeder Funktionsaufruf auf dem **Call-Stack** gespeichert wird. Bei sehr großen Rekursionstiefen kann es zu einem **Stack Overflow** kommen.
-- **Effizienz**: Rekursive Lösungen können langsamer sein als iterative Ansätze, da viele Funktionsaufrufe nötig sind (z. B. in der Fibonacci-Funktion).
-
-Eine der "bösartigsten" rekursiven Funktionen, wenn es um Leistung und Effizienz geht, ist übrigens die Ackermann-Funktion.
 
 ---
 

@@ -1,7 +1,7 @@
 # Exceptions
 
 Empfohlene Skills: [Datentypen und Operatoren](01_datentypen_operationen.md) und [Kontrollstrukturen](02_kontrollstrukturen.md)  
-Für eigene Exceptions: Grundlagen in [OOP](16_oop.md)
+Für eigene Exceptions: Grundlagen in [OOP](15_oop)
 
 ---
 
@@ -55,7 +55,7 @@ Man sollte `except Exception` vermeiden!
 
 ## Eigene Exceptions erstellen
 
-Man kann eigene Exception-Klassen erstellen, indem man von der `Exception`-Klasse erbt. Diese Klassen können dann wie 
+Man kann eigene Exception-Klassen erstellen, indem man eine Klasse erstellt, die von der `Exception`-Klasse erbt. Diese Klassen können dann wie 
 jede andere Exception verwendet werden. Das ist nützlich, wenn man größere Projekte als die Übungsaufgaben entwickelt und
 die Standard-Fehlermeldungen nicht ausreichen.
 
@@ -71,6 +71,5 @@ class MyException(Exception):
 
 ---
 
-[vorherige Seite](18_fortgeschrittene_oop.md)  
-[Zurück zum Inhaltsverzeichnis](00_inhaltsverzeichnis.md)  
-[nächste Seite](20_typehints.md)
+[vorherige Seite](17_fortgeschrittene_oop)  
+[Zurück zum Inhaltsverzeichnis](00_inhaltsverzeichnis.md)

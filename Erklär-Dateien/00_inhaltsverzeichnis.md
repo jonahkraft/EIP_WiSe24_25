@@ -8,8 +8,7 @@
 - `float` (Gleitkommazahlen)
 - `bool` (Boolesche Werte)
 - `str` (Strings)
-- `None`
-- Typehints
+- Typumwandlung
 - Nutzereingaben
 - Variablen benennen
 
@@ -47,9 +46,9 @@
 - Slicing
 
 
-## Zweidimensionale Listen
+## Matrizen und Listen von Listen
 
-> [Link](05_2d_listen.md)
+> [Link](05_matrizen_2d_listen.md)
 
 - Erstellung von zweidimensionalen Listen
 - Zugriff auf Elemente in zweidimensionalen Listen
@@ -131,7 +130,6 @@
 - Aufbau einer rekursiven Funktion
 - Beispiel: Fakultät berechnen
 - Beispiel: Fibonacci-Zahlen
-- Vorteile und Nachteile der Rekursion
 
 
 ## Backtracking
@@ -139,8 +137,7 @@
 > [Link](12_backtracking.md)
 
 - Aufbau eines Backtracking-Algorithmus
-- Beispiel: Das N-Damen-Problem
-- Zusammenfassung
+- Beispiel: Tiefensuche (Depth-First Search)
 
 
 ## Tupel, Dictionaries und Sets
@@ -150,7 +147,6 @@
 - Tupel
 - Dictionaries
 - Sets
-- Unterschiede zwischen Tupel, Dictionary und Set
 
 
 ## Dynamische Programmierung
@@ -158,20 +154,12 @@
 > [Link](14_dynamische_programmierung.md)
 
 - Beispiel: Fibonacci
-- Ein weiterer Anwendungsfall
-
-
-## Breitensuche (Breadth-First Search, BFS)
-
-> [Link](15_breitensuche.md)
-
-- Algorithmus
-- Code
+- Beispiel: Einbrecher
 
 
 ## Objektorientierte Programmierung (OOP)
 
-> [Link](16_oop.md)
+> [Link](15_oop.md)
 
 - Grundlagen der OOP
 - Die Rolle von `self` in Python-Klassen
@@ -182,7 +170,7 @@
 
 ## Vererbung
 
-> [Link](17_vererbung.md)
+> [Link](16_vererbung.md)
 
 - Was ist Vererbung?
 - Einfaches Beispiel:
@@ -194,36 +182,18 @@
 
 ## Fortgeschrittene OOP
 
-> [Link](18_fortgeschrittene_oop.md)
+> [Link](17_fortgeschrittene_oop.md)
 
 - @staticmethod
 - @classmethod
-- Abstrakte Klassen (ABC) und @abstractmethod
 - Abstrakte Klassen
 - @abstractmethod
 
 
 ## Exceptions
 
-> [Link](19_exceptions.md)
+> [Link](18_exceptions.md)
 
 - Was sind Exceptions?
 - Catching Exceptions
 - Eigene Exceptions erstellen
-
-
-## Eine Einführung zu Typehints
-
-> [Link](20_typehints.md)
-
-- Einführung
-- Typehints für primitive Datentypen
-- Typehints für Listen
-- Typehints für Funktionen
-- Typehints für Tupel
-- Typehints für Sets
-- Typehints für Dictionaries
-- Probleme mit Typehints
-- Wann Typehints verwenden?
-
-

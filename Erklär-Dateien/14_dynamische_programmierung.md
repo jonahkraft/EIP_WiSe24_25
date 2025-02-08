@@ -46,39 +46,45 @@ def dynamic_fibonacci(n, mem={}):
     return mem[n]
 ```
 
+## Beispiel: Einbrecher
 
-## Ein weiterer Anwendungsfall
+Ein Einbrecher möchte in ein Haus einbrechen und hat eine Liste von Werten, die die Beute in jedem Raum repräsentieren.
+Er darf jedoch nicht in zwei benachbarte Räume einbrechen. Wie kann er die maximale Beute erzielen?
+
+Für das Problem lässt sich die folgende Rekursion formulieren:
 
 ```python
-def func(n):
-    if n <= 1:
-        return 42
-    else:
-        return max(func(n-2) + 1, func(n-1) + 2)
+def max_loot(house, n):
+    if n == 0:
+        return house[0]
+    if n == 1:
+        return max(house[0], house[1])
+    
+    # entweder wir nehmen den Raum n nicht oder wir nehmen ihn und müssen den Raum n-1 überspringen
+    return max(max_loot(house, n-1), house[n] + max_loot(house, n-2))
 ```
 
-Diese Funktion hat keinen tieferen Sinn, aber sie hat offensichtlich Potenzial, verbessert zu werden. Machen wir also
-auch das mit einem Memory.
+Die Laufzeit des obigen Algorithmus ist exponentiell in n, da wir für jedes n zwei Rekursionsaufrufe machen. Wir können
+das Problem jedoch auch mit dynamischer Programmierung lösen. Dazu erstellen wir ein Memory, in dem wir die maximalen
+Beuten für die Räume speichern. Wir können dann in jedem Schritt fragen, ob wir den Wert bereits berechnet haben und
+ihn direkt zurückgeben.
 
 ```python
-def dynamic_func(n, mem={}):
-    # Es gibt jetzt einen neuen Basisfall für die Funktion, und zwar, dass der Wert bereits berechnet wurde.
-
+def dynamic_max_loot(house, n, mem={}):
     if n in mem:
         return mem[n]
-
-    # Der bereits bestehende Basisfall wird darum ergänzt, dass das Ergebnis ins Memory geschrieben wird.
-    # Ansonsten geht man analog zu Fibonacci vor
-
-    if n <= 1:
-        mem[n] = 42
+    
+    if n == 0:
+        mem[n] = house[0]
+    elif n == 1:
+        mem[n] = max(house[0], house[1])
     else:
-        mem[n] = max(dynamic_func(n-2, mem) + 1, dynamic_func(n-1, mem) + 2)
-        
+        mem[n] = max(dynamic_max_loot(house, n-1, mem), house[n] + dynamic_max_loot(house, n-2, mem))
+    
     return mem[n]
 ```
 
 ---
 [vorherige Seite](13_tupel_dictionaries_sets.md)  
 [Zurück zum Inhaltsverzeichnis](00_inhaltsverzeichnis.md)  
-[nächste Seite](15_breitensuche.md)
+[nächste Seite](15_oop.md)

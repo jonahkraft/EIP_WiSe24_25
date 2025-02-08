@@ -1,12 +1,12 @@
 # Tupel, Dictionaries und Sets
 
-Empfohlene Skills: [Datentypen und Operatoren](01_datentypen_operationen.md) und Grundkenntnisse in [Listen](04_listen.md)
+Empfohlene Skills: [Datentypen und Operatoren](01_datentypen_operationen.md) und Grundkenntnisse
+in [Listen](04_listen.md)
 
 ---
 
 In Python gibt es verschiedene Datentypen, die sich für unterschiedliche Aufgaben eignen. In diesem Abschnitt schauen
-wir uns die **Tupel**, **Dictionaries** und **Sets** an.
-
+wir uns **Tupel**, **Dictionaries** und **Sets** an.
 
 ## Tupel
 
@@ -30,16 +30,11 @@ my_tuple = (1, 2, 3)
 my_other_tupel = 1, 2, 3
 ```
 
-### Eigenschaften:
-
-- **Unveränderlich**: Einmal erstellt, kann der Inhalt eines Tupels nicht mehr geändert werden.
-- **Indexierbar**: Elemente können über ihre Indizes abgerufen werden.
-
 ### Beispiel:
 
 ```python
 my_tuple = (10, 20, 30)
-print(my_tuple[1])  
+print(my_tuple[1])
 
 # Tupel sind unveränderlich, daher führt folgender Code zu einem Fehler:
 # mein_tupel[1] = 25  
@@ -55,9 +50,8 @@ print(my_tuple[1])
 | `tupel * n`        | Wiederholt das Tupel n-mal              | `(1, 2) * 2` → `(1, 2, 1, 2)`      |
 | `element in tupel` | Prüft, ob ein Element im Tupel ist      | `2 in (1, 2, 3)` → `True`          |
 
-Die + und * Operationen funktionieren, da nicht das ursprüngliche Tupel verändert wird, sondern es wird ein neues Tupel
-erzeugt und zurückgegeben.
-
+Die + und * Operationen funktionieren, da nicht das ursprüngliche Tupel verändert wird, sondern ein neues Tupel
+erzeugt und zurückgegeben wird.
 
 ## Dictionaries
 
@@ -81,11 +75,11 @@ empty_dict = {}  # Ein leeres Dictionary
 
 ```python
 person = {'name': 'Anna', 'alter': 30, 'stadt': 'Berlin'}
-print(person['name'])  
+print(person['name'])
 
 # Wert ändern
 person['alter'] = 31
-print(person)  
+print(person)
 
 # Neues Schlüssel-Wert-Paar hinzufügen
 person['beruf'] = 'Ingenieurin'
@@ -107,11 +101,10 @@ person['beruf'] = 'Ingenieurin'
 
 Achtung: `dict[key]` wirft einen Fehler, wenn der key nicht enthalten ist. dict.get(key, default) ist sicherer.
 
-
 ## Sets
 
-Ein **Set** ist eine ungeordnete Sammlung von **einzigartigen** Elementen. Sets können verwendet werden, um Duplikate zu
-entfernen oder Schnittmengen und Vereinigungen von Mengen zu bilden.
+Ein **Set** ist eine ungeordnete Sammlung von **einzigartigen** Elementen. Sie verhalten sich wie mathematische Mengen
+und bieten Operationen wie Vereinigung, Schnittmenge und Differenz. Sets sind veränderlich (mutable).
 
 ### Syntax:
 
@@ -129,7 +122,7 @@ empty_set = set()  # Ein leeres Set (Achtung: {} erzeugt ein leeres Dictionary!)
 
 ```python
 digit_set = {1, 2, 3, 4, 4, 5}  # Doppelte 4 wird automatisch entfernt
-print(digit_set) 
+print(digit_set)
 
 # Element hinzufügen
 digit_set.add(6)
@@ -151,15 +144,6 @@ digit_set.remove(2)
 | `set.intersection(anderes_set)` | Schnittmenge zweier Sets                          | `{1, 2}.intersection({2, 3})` → `{2}`   |
 | `set.difference(anderes_set)`   | Gibt die Differenzmenge zwischen zwei Sets zurück | `{1, 2}.difference({2, 3})` → `{1}`     |
 
-
-## Unterschiede zwischen Tupel, Dictionary und Set
-
-| Eigenschaft            | Tupel                      | Dictionary                           | Set                          |
-|------------------------|----------------------------|--------------------------------------|------------------------------|
-| **Veränderbarkeit**    | Unveränderlich (immutable) | Veränderlich (mutable)               | Veränderlich (mutable)       |
-| **Indexierung**        | Ja (über Indizes)          | Nein (Schlüssel)                     | Nein                         |
-| **Doppelte Elemente**  | Erlaubt                    | Schlüssel sind eindeutig             | Nur einzigartige Elemente    |
-| **Unveränderlichkeit** | Ja                         | Schlüssel müssen unveränderlich sein | Elemente sind unveränderlich |
 
 ---
 

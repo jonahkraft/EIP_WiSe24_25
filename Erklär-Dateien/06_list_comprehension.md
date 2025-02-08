@@ -4,8 +4,8 @@ Empfohlene Skills: [Datentypen und Operatoren](01_datentypen_operationen.md), [K
 
 ---
 
-Beginnen wir mit einem Beispiel.
-Wenn ich eine Liste haben will, in der zehnmal die Zahl 0 steht, kann ich das so machen.
+Beginnen wir mit einem Beispiel. Der folgende Code erstellt eine Liste mit 10 Nullen.
+
 
 ## Herleitung
 
@@ -13,7 +13,7 @@ Wenn ich eine Liste haben will, in der zehnmal die Zahl 0 steht, kann ich das so
 list1 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 ```
 
-Das ist insbesondere bei grossen Listen nervig und dauert lang, weil hardgecoded.
+Das ist insbesondere bei grossen Listen ungeeignet und dauert lang.
 Es gibt aber auch die folgende Möglichkeit:
 
 ```python
@@ -22,23 +22,20 @@ for _ in range(10):
     list2.append(0)
 ```
 
-Das ist schon cooler, aber ich wuerde es gerne noch besser machen. Man kann dasselbe auch in einer Zeile schreiben.
+Dies vermeidet das Schreiben von 10 Nullen, ist aber auch nicht besonders elegant. Es gibt eine bessere Möglichkeit:
 
 ```python
 list3 = [0 for _ in range(10)]
 ```
 
-Das ist dann List Comprehension. Was passiert hier? Bei einer "normalen" for-Schleife wie oben, schreibt man erst
-den Schleifenkopf "for _ in range(10):" und dann, was passieren soll. Wenn man eine for-Schleife in eine Liste packt,
-schreibt man zuerst, was man hinzufügen will - in dem Fall die Zahl 0 - und dann den Schleifenkopf, aber ohne den
-Doppelpunkt. Das ist schon die ganze Magie.
-
+Dies nennt man List Comprehension. Es ist eine elegante Möglichkeit, Listen zu erstellen. Dabei wird eine for-Schleife in
+eine Liste gepackt, um direkt zu definieren, welche Elemente hinzugefügt werden sollen. Der Doppelpunkt fällt dabei weg.
 
 ## Einige Beispiele
 
 ### Ein komplexeres Beispiel
 
-Zuerst erstelle ich eine Liste, in der ich 10 zufaellige Zahlen zwischen 1 und 10 haben will. Mit List Comprehension
+Zuerst erstelle ich eine Liste, in der ich 10 zufällige Zahlen zwischen 1 und 10 haben will. Mit List Comprehension
 geht das so:
 
 ```python
@@ -46,7 +43,7 @@ import random
 random_numbers = [random.randint(1, 10) for _ in range(10)]
 ```
 
-Jetzt wuerde ich gerne alle Zahlen aus random_numbers, die groesser als 5 sind, in eine neue Liste packen.
+Jetzt würde ich gerne alle Zahlen aus random_numbers, die größer als 5 sind, in eine neue Liste packen.
 Ohne List Comprehension geht das so:
 
 ```python
@@ -82,7 +79,7 @@ matrix2 = [[(i+j) % 2 == 0 for i in range(5)] for j in range(5)]
 ```
 
 Zum Schluss kommt noch ein komplexeres Beispiel. Zuerst erstelle ich 2 Listen mit je 10 zufälligen Zahlen wie oben.
-Dann möchte ich eine neue Liste haben, die alle geordneten Paare von Zahlen aus den beiden Listen enthaelt, deren
+Dann möchte ich eine neue Liste haben, die alle geordneten Paare von Zahlen aus den beiden Listen enthält, deren
 Summe durch drei teilbar ist.
 
 ```python
@@ -97,8 +94,12 @@ result = [(i, j)
           ]
 ```
 
+List Comprehensions sind eine sehr mächtige Technik, um Listen zu erstellen. Sie sind sehr elegant und können den Code
+deutlich verkürzen und übersichtlicher machen. Aber man sollte es nicht übertrieben verwenden, da es die Lesbarkeit
+des Codes beeinträchtigen kann, wenn viele verschachtelte Schleifen und Bedingungen enthalten sind.
+
 ---
 
-[vorherige Seite](05_2d_listen.md)  
+[vorherige Seite](05_matrizen_2d_listen)  
 [Zurück zum Inhaltsverzeichnis](00_inhaltsverzeichnis.md)  
 [nächste Seite](07_dateien.md)

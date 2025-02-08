@@ -1,7 +1,7 @@
 # Fortgeschrittene OOP
 
 Empfohlene Skills: [Datentypen und Operatoren](01_datentypen_operationen.md), [Kontrollstrukturen](02_kontrollstrukturen.md),
-[Funktionen](09_funktionen.md) und [OOP](16_oop.md)
+[Funktionen](09_funktionen.md) und [OOP](15_oop)
 
 ---
 
@@ -56,8 +56,8 @@ class Circle:
         return cls.pi * (radius ** 2)
 ```
 
-
-# Abstrakte Klassen (ABC) und @abstractmethod
+Bemerkung: pi ist ein Klassenattribut, das von allen Instanzen der Klasse Circle geteilt wird. Daher wird es nicht
+über `self` sondern über `cls` aufgerufen.
 
 ## Abstrakte Klassen
 
@@ -103,6 +103,6 @@ class Cat(Animal):
 
 ---
 
-[vorherige Seite](17_vererbung.md)  
+[vorherige Seite](16_vererbung)  
 [Zurück zum Inhaltsverzeichnis](00_inhaltsverzeichnis.md)  
-[nächste Seite](19_exceptions.md)
+[nächste Seite](18_exceptions)

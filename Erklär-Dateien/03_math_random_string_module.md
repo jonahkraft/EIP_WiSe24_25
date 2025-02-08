@@ -10,12 +10,12 @@ Das `math`-Modul bietet eine Vielzahl von mathematischen Funktionen und Konstant
 
 ### Wichtige Funktionen und Konstanten:
 
-- **`math.pi`**: Die Konstante π (Pi), die das Verhältnis des Umfangs eines Kreises zu seinem Durchmesser darstellt.
-- **`math.e`**: Die Basis des natürlichen Logarithmus (e), etwa 2.71828.
+- **`math.pi`**: Die Konstante π
+- **`math.e`**: Die eulersche Zahl e, etwa 2.71828
 - **`math.sqrt(x)`**: Gibt die Quadratwurzel von x zurück.
 - **`math.factorial(x)`**: Gibt die Fakultät von x zurück (x!).
 - **`math.sin(x)`**, **`math.cos(x)`**, **`math.tan(x)`**: Trigonometrische Funktionen, die den Sinus, Kosinus und Tangens eines Winkels in Bogenmaß berechnen.
-- **`math.log(x[, base])`**: Gibt den Logarithmus von x zur angegebenen Basis zurück (Basis ist optional, Standard ist e).
+- **`math.log(x, base)`**: Gibt den Logarithmus von x zur angegebenen Basis zurück (Basis ist optional, Standard ist e).
 - **`math.floor(x)`**: Rundet x auf die nächste ganze Zahl nach unten.
 - **`math.ceil(x)`**: Rundet x auf die nächste ganze Zahl nach oben.
 
@@ -49,6 +49,7 @@ Das `random`-Modul bietet Funktionen zur Erzeugung von Zufallszahlen und ist nü
 - **`random.randint(a, b)`**: Gibt eine zufällige Ganzzahl zwischen a und b (inklusive) zurück.
 - **`random.choice(seq)`**: Wählt ein zufälliges Element aus einer nicht leeren Sequenz (z.B. Liste oder Tuple) aus.
 - **`random.shuffle(lst)`**: Mischt die Elemente einer Liste in zufälliger Reihenfolge.
+- **`random.sample(population, k)`**: Wählt eine zufällige Teilmenge der Größe k aus einer Population aus.
 
 ### Beispiel:
 

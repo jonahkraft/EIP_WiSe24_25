@@ -5,9 +5,11 @@ Empfohlene Skills: [Datentypen und Operatoren](01_datentypen_operationen.md) und
 ---
 
 Das `os`-Modul in Python bietet eine Schnittstelle zu Betriebssystem-Funktionen, die uns ermöglicht, 
-Dateien und Verzeichnisse zu verwalten, das Arbeitsverzeichnis zu ändern, Pfade zu überprüfen und vieles mehr. 
-Im Folgenden werden einige grundlegende Funktionen dieses Moduls vorgestellt und anhand von Beispielen erklärt.
+Dateien und Verzeichnisse zu verwalten, das Arbeitsverzeichnis zu ändern, Pfade zu überprüfen und vieles mehr.
 
+Eines vorab: Sollte man Pfade brauchen, um beispielweise Dateien einzulesen, ist es dringend zu empfehlen, diejenigen
+Pfade, die im Programmcode stehen (z.B. wo eine Konfigurationsdatei zu finden ist), als relative Pfade zu verwenden, da
+absolute Pfade auf anderen Rechnern ggf. nicht funktionieren.
 
 ## Aktuelles Arbeitsverzeichnis ermitteln
 
@@ -35,9 +37,8 @@ os.chdir("sub_dir")
 print(os.getcwd())
 ```
 
-Hier wird das Arbeitsverzeichnis in den Unterordner `sub_dir` geändert. Auch hier wird der absolute Pfad des neuen 
-Arbeitsverzeichnisses zurückgegeben.
-
+Hier wird das Arbeitsverzeichnis in den Unterordner `sub_dir` geändert. Analog zum Beispiel eben gibt `os.getcwd()`
+dennoch den absoluten Pfad zurück.
 
 ## Inhalte eines Verzeichnisses auflisten
 
@@ -50,7 +51,7 @@ print(os.listdir())
 ```
 
 Diese Funktion gibt eine unsortierte Liste der Dateien und Ordner im aktuellen Arbeitsverzeichnis zurück. Um die Liste 
-zu sortieren, kann die Methode `sort()` angewendet werden.
+alphabetisch zu sortieren, kann die Methode `sort()` angewendet werden. 
 
 ### Sortieren der Liste:
 
@@ -146,9 +147,6 @@ sobald die Datei gelöscht ist, es wird nichts in den Papierkorb verschoben ;-)
 ```python
 os.remove("file1.txt")
 ```
-
-**Hinweis**: Es ist oft sicherer, die Datei zu überschreiben, anstatt sie direkt zu löschen, insbesondere bei wichtigen Daten.
-
 
 ## Zusammenfassung
 

@@ -1,7 +1,7 @@
 # Backtracking
 
 Empfohlene Skills: [Datentypen und Operatoren](01_datentypen_operationen.md), [Kontrollstrukturen](02_kontrollstrukturen.md)
-und [Funktionen](09_funktionen.md). Für das Beispiel zusätzlich [zweidimensionale Listen](05_2d_listen.md) und [List Comprehension](06_list_comprehension.md)
+und [Funktionen](09_funktionen.md). Für das Beispiel zusätzlich [zweidimensionale Listen](05_matrizen_2d_listen) und [List Comprehension](06_list_comprehension.md)
 
 ---
 
@@ -19,10 +19,10 @@ beim Sortieren oder bei Entscheidungsproblemen. Klassische Beispiele für Backtr
 
 Ein Backtracking-Algorithmus besteht aus den folgenden Komponenten:
 
-- **Basisfall (Abbruchbedingung)**: Wenn das Problem vollständig gelöst ist, endet der Algorithmus und gibt die Lösung zurück.
+- **Basisfall**: Wenn das Problem vollständig gelöst ist, endet der Algorithmus und gibt die Lösung zurück.
 - **Rekursiver Fall**: Der Algorithmus versucht, eine Lösung Schritt für Schritt aufzubauen, indem er mögliche Entscheidungen 
-- ausprobiert. Wenn eine Entscheidung zu keiner gültigen Lösung führt, wird ein Rückschritt gemacht (**Backtracking**), 
-- und es wird eine alternative Entscheidung getroffen.
+ausprobiert. Wenn eine Entscheidung zu keiner gültigen Lösung führt, wird ein Rückschritt gemacht (**Backtracking**), 
+und es wird eine alternative Entscheidung getroffen.
 
 
 ### Grundlegender Ablauf:
@@ -32,8 +32,7 @@ Ein Backtracking-Algorithmus besteht aus den folgenden Komponenten:
 3. **Wenn eine ungültige Lösung gefunden wird**, einen Schritt zurückgehen und eine alternative Entscheidung treffen.
 4. **Abbruch**: Wenn eine vollständige gültige Lösung gefunden wird, endet der Algorithmus.
 
-
-#### Pseudocode:
+In Pseudocode sieht das so aus:
 
 ```
 def vervollständige(Konfiguration K):
@@ -54,87 +53,57 @@ def vervollständige(Konfiguration K):
 
 ```
 
+## Beispiel: Tiefensuche (Depth-First Search)
 
-## Beispiel: Das N-Damen-Problem
+Ein einfaches Beispiel für Backtracking ist die **Tiefensuche** (Depth-First Search, DFS) in einem gerichteten Graphen. 
+Falls Sie sich nicht sicher sind, was ein gerichteter Graph ist, können Sie [hier](https://de.wikipedia.org/wiki/Gerichteter_Graph) mehr darüber erfahren.
+Die Tiefensuche beginnt bei einem Startknoten und besucht alle benachbarten Knoten rekursiv, bevor sie sich weiterbewegt. 
+Im folgenden Beispiel verwenden wir Tiefensuche, um zu prüfen, ob es einen Weg von einem Startknoten zu einem Zielknoten in einem gerichteten Graphen gibt.
+Den Graphen repräsentieren wir als **Adjazenzliste**, wobei jeder Knoten eine Liste seiner Nachbarn hat. Als Datenstruktur
+verwenden wir ein **Dictionary** in Python. [Hier](13_tupel_dictionaries_sets.md) können Sie mehr über Dictionaries erfahren.
 
-Beim **N-Damen-Problem** geht es darum, `N` Damen auf einem `N x N`-Schachbrett so zu platzieren, 
-dass keine zwei Damen sich gegenseitig angreifen können (weder in derselben Zeile, Spalte noch Diagonale). 
-Backtracking ist eine Methode, dieses Problem zu lösen.
 
 ```python
-def is_safe(board, row, col, n):
-    # Check if it's safe to place the queen at (row, col)
+def dfs(graph, current, target, visited=None):
+    if visited is None:
+        visited = set()
 
-    # Check left side in the same row
-    for i in range(col):
-        if board[row][i] == 1:
-            return False
+    print(f"Besuche {current}")
 
-    # Check upper diagonal on the left side
-    for i, j in zip(range(row, -1, -1), range(col, -1, -1)):
-        if board[i][j] == 1:
-            return False
-
-    # Check lower diagonal on the left side
-    for i, j in zip(range(row, n, 1), range(col, -1, -1)):
-        if board[i][j] == 1:
-            return False
-
-    return True
-
-def solve_n_queens(board, col, n):
-    # Base case: If all queens are placed, return True
-    if col >= n:
+    # zuerst prüfen wir, ob wir am Ziel sind. Das entspricht dem "if vollständig(K) then" im Pseudocode
+    if current == target:
         return True
 
-    # Try placing a queen in each row
-    for i in range(n):
-        if is_safe(board, i, col, n):
-            # Place the queen
-            board[i][col] = 1
+    # sicherstellen, dass jeder Knoten nur einmal besucht wird
+    if current not in visited:
+        visited.add(current)
 
-            # Recursion: Try to place the next queen
-            if solve_n_queens(board, col + 1, n):
-                return True
+        # rekursiv alle Nachbarn besuchen. Das entspricht dem "for each Erweiterungsmöglichkeit E do" im Pseudocode
+        for neighbor in graph.get(current, []):
+            # nur Nachbarn besuchen, die noch nicht besucht wurden. Das entspricht dem "if zulässig(K) then" im Pseudocode
+            if neighbor not in visited:
+                # rekursiver Aufruf für den Nachbarn. Das entspricht dem "vervollständige(K)" im Pseudocode
+                if dfs(graph, neighbor, target, visited):
+                    return True
+        
+        # Ein expliziter Rückgabewert False ist notwendig, wenn kein Weg gefunden wurde. Dies liegt daran, dass wir automatisch
+        # zum vorherigen Knoten zurückkehren, wenn der rekursive Aufruf False zurückgibt. Ein etwaiger Backtracking-Schritt
+        # entspricht dem "mache rückgängig(K, E)" im Pseudocode
 
-            # Backtracking: Remove the queen (as no solution was found)
-            board[i][col] = 0
-
-    # If no solution is found, return False
     return False
 
-def n_queens_problem(n):
-    # Create an N x N chessboard (initially empty, i.e., 0)
-    board = [[0 for _ in range(n)] for _ in range(n)]
 
-    if not solve_n_queens(board, 0, n):
-        print("No solution exists")
-        return False
+graph = {
+    'A': ['B', 'C'],
+    'B': ['D', 'E'],
+    'C': ['B'],
+    'D': ['C'],
+    'E': ['F'],
+    'F': ['A']
+}
 
-    # Output the solution
-    for row in board:
-        print(row)
-    return True
-
-# Example: Solve the 4-Queens problem
-n_queens_problem(4)
+print(dfs(graph, 'A', 'F'))
 ```
-
-### Erklärung des Algorithmus:
-
-1. Der Algorithmus platziert eine Dame in jeder Spalte, indem er in jeder Zeile prüft, ob die Position sicher ist.
-2. Wenn eine Dame platziert wird, wird rekursiv versucht, die nächste Dame zu platzieren.
-3. Wenn keine gültige Platzierung möglich ist, wird das Backtracking durchgeführt (die letzte Platzierung wird entfernt), und eine alternative Platzierung wird getestet.
-4. Wenn alle Damen platziert sind, gibt der Algorithmus die Lösung zurück.
-
-
-## Zusammenfassung
-
-- **Backtracking** ist eine Methode zur systematischen Suche nach Lösungen, indem Entscheidungen getroffen und ggf. 
-- rückgängig gemacht werden.
-- Es wird häufig für Entscheidungsprobleme wie das N-Damen-Problem, Sudoku oder das Rucksackproblem verwendet.
-- Backtracking basiert auf rekursiven Funktionsaufrufen, bei denen eine Lösung Schritt für Schritt aufgebaut und bei 
-- ungültigen Schritten rückwärts gegangen wird.
 
 ---
 

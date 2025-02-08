@@ -50,6 +50,9 @@ print("Die kleinste Zahl ist:", smallest_digit)
 
 Die `zip()`-Funktion kombiniert mehrere iterierbare Objekte und gibt ein Iterator von Tupeln zurück, wobei 
 das i-te Tupel aus den i-ten Elementen der übergebenen iterierbaren Objekte besteht.
+Was zunächst verwirrend klingen mag, ist in der Praxis sehr nützlich, um Daten zu kombinieren. In dem folgenden Beispiel
+werden zwei Listen kombiniert. Die kombinierte Liste enthält die Tupel `(1, 'a')`, `(2, 'b')` und `(3, 'c')`. Dies
+ist nützlich, wenn man beispielsweise eine Liste von Gegenständen und eine Liste von Preisen hat und diese kombinieren möchte.
 
 ### Beispiel:
 
@@ -64,7 +67,9 @@ print("Kombinierte Liste:", combined)
 ## `enumerate()`
 
 Die `enumerate()`-Funktion fügt einem iterierbaren Objekt einen Zähler hinzu und gibt ein Iterator von Tupeln zurück, 
-wobei jedes Tupel den Index und das Element enthält.
+wobei jedes Tupel den Index und das Element enthält. Hierbei handelt es sich um einen Spezialfall von `zip()`, bei dem
+der Zähler als Index verwendet wird. `enumerate()` ist eine elegante Möglichkeit, über die Indizes und Elemente einer Liste zu iterieren.
+Dadurch ist es nicht notwendig, über die Länge der Liste zu iterieren und manuell auf die Elemente zuzugreifen.
 
 ### Beispiel:
 
@@ -88,11 +93,13 @@ even_digits = list(filter(lambda x: x % 2 == 0, digits))
 print("Gerade Zahlen:", even_digits)  
 ```
 
+Man kann sich das so vorstellen, als ob die Funktion `filter()` die Elemente durchgeht und diejenigen, für die die Funktion `True` zurückgibt, in die neue Liste packt.
+
 
 ## `map()`
 
 Die `map()`-Funktion wendet eine Funktion auf jedes Element eines iterierbaren Objekts an und gibt ein Iterator mit den 
-Ergebnissen zurück.
+Ergebnissen zurück. Man kann sich das so vorstellen, als ob die Funktion `map()` die Funktion auf jedes Element anwendet und die Ergebnisse in eine neue Liste packt.
 
 ### Beispiel:
 
