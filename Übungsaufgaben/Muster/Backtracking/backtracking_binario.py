@@ -31,6 +31,8 @@ b3 = [[2, 1, 0, 0, 1, 0, 1, 1, 0, 1],
 
 
 def empty_cell(matrix: List[List[int]]) -> Tuple[int, int]:
+    # sucht die erste leere Zelle und gibt die Koordinaten zurück.
+    # Gibt -1, -1 zurück, wenn keine leere Zelle gefunden wurde
     for i in range(len(matrix)):
         for j in range(len(matrix[i])):
             if matrix[i][j] == 0:
@@ -39,6 +41,8 @@ def empty_cell(matrix: List[List[int]]) -> Tuple[int, int]:
 
 
 def allowed(matrix: List[List[int]], r: int, c: int) -> bool:
+    # Prüft, ob es einen Konflikt mit den Regeln aus der Aufgabenstellung gibt, siehe Bemerkungen bei den
+    # Bedingungen.
 
     row = matrix[r]
     col = [matrix[i][c] for i in range(len(matrix))]
@@ -61,14 +65,17 @@ def complete_field(matrix: List[List[int]]) -> bool:
 
     y, x = empty_cell(matrix)
     if y == -1:
+        # wenn keine leere Zelle mehr gefunden wird, ist das Spielfeld vollständig
         return True
 
-    for stone in range(1, 3):
+    for stone in [1, 2]: # wir probieren beide Steine aus
         matrix[y][x] = stone
+
+        # prüfen, ob die Bedingungen erfüllt sind und sich das Spielfeld rekursiv vervollständigen lässt
         if allowed(matrix, y, x):
             if complete_field(matrix):
                 return True
-        matrix[y][x] = 0
+        matrix[y][x] = 0  # Backtracking
     return False
 
 
