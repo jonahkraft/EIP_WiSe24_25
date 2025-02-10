@@ -38,9 +38,11 @@ müssen, lautet: Können wir k Teilmengen finden, sodass die Vereinigung dieser 
 
 Beispiel:
 
-Universum: {1, 2, 3, 4, 5}
-Mengen: {{1, 3}, {2}, {1, 2, 4}, {1, 5}}
+Universum: {1, 2, 3, 4, 5}  
+Mengen: {{1, 3}, {2}, {1, 2, 4}, {1, 5}}  
 
 Für k = 3 ist die Antwort ja, denn wir können die Teilmengen {1, 3}, {1, 2, 4} und {1, 5} auswählen, um das Universum zu
 bilden.
 Andererseits ist die Antwort für k = 2 nein, da wir keine 2 Teilmengen finden können, die das Universum bilden.
+
+[Hier](../Muster/Backtracking/backtracking_set_cover.py) finden Sie die Musterlösung.
